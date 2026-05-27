@@ -3,7 +3,8 @@
 *.key
 
 # 数据快照缓存（体积大，可由脚本重新生成）
-data_cache/
+data_cache/*
+!data_cache/_v2_name_cache.json    # V2 名称缓存（小，让评委首次 clone 就秒回）
 *.pkl
 *.parquet
 

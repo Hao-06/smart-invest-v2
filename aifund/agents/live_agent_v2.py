@@ -48,6 +48,35 @@ _NAME_CACHE: dict[str, str] = {
     **{code: f"{name}ETF" for code, name in _SECTOR_ETFS.items()},
 }
 
+# 磁盘级名称缓存（解决 CLI 冷启动慢：个股信息接口偶发 30s 超时 × N 只股 = 数分钟）。
+# 首次 CLI 调用慢一次（数十秒），结果写入 data_cache/_v2_name_cache.json，
+# 之后所有 CLI 进程秒启。看板因长进程内存常驻不受影响（但也享有持久化好处）。
+import json as _json
+from pathlib import Path as _Path
+
+_NAME_CACHE_FILE = _Path(__file__).resolve().parent.parent.parent / "data_cache" / "_v2_name_cache.json"
+
+
+def _load_persistent_name_cache() -> None:
+    try:
+        if _NAME_CACHE_FILE.exists():
+            _NAME_CACHE.update(_json.loads(_NAME_CACHE_FILE.read_text(encoding="utf-8")))
+    except Exception:
+        pass
+
+
+def _save_persistent_name_cache() -> None:
+    try:
+        _NAME_CACHE_FILE.parent.mkdir(exist_ok=True)
+        _NAME_CACHE_FILE.write_text(
+            _json.dumps(_NAME_CACHE, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    except Exception:
+        pass
+
+
+_load_persistent_name_cache()
+
 
 @dataclass
 class DailyDecision:
@@ -239,6 +268,7 @@ class LiveTradingAgentV2:
         # ETF 不在个股信息接口里 —— 直接用代码兜底，绝不发起注定失败的网络请求
         if self._is_etf(symbol):
             _NAME_CACHE[symbol] = symbol
+            _save_persistent_name_cache()
             return symbol
         try:
             info = sources.get_stock_info(symbol)
@@ -247,6 +277,7 @@ class LiveTradingAgentV2:
             name = ""
         # 无论成功失败都写缓存：失败也缓存代码本身，避免每天重试昂贵的失败请求
         _NAME_CACHE[symbol] = name or symbol
+        _save_persistent_name_cache()  # 持久化到磁盘，CLI 跨进程也享有缓存
         return _NAME_CACHE[symbol]
 
     @staticmethod
