@@ -1,0 +1,18 @@
+# Streamlit 全局主题 —— 金融终端风：深炭灰 + 古金色
+# 这是 Bloomberg / Reuters Eikon 风格的精简化定制。
+# 修改后需重启 Streamlit 才能生效。
+
+[theme]
+base = "dark"
+primaryColor = "#d4af37"              # 古金色（按钮、强调色）
+backgroundColor = "#0a0d14"           # 深炭黑（主背景）
+secondaryBackgroundColor = "#141821"  # 略浅（卡片、侧边栏背景）
+textColor = "#e8e8e8"
+font = "sans serif"
+
+[server]
+headless = false
+runOnSave = true                      # 文件保存后自动重载
+
+[browser]
+gatherUsageStats = false

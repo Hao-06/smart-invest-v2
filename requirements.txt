@@ -1,0 +1,25 @@
+# ─── V2 实战智能体所需（精简版，可上 Streamlit Cloud 免费 1GB 限制）───
+
+# 数据源
+akshare>=1.16.0
+pandas>=2.2.0
+numpy>=1.26.0
+pyarrow>=16.0.0          # Parquet 快照缓存（类型保真、可复现）
+
+# 大模型（仅实盘启用 --use-llm 时调用；回测 offline 模式不需要）
+openai>=1.40.0
+tenacity>=8.5.0
+
+# 配置与数据模型
+python-dotenv>=1.0.0
+pydantic>=2.8.0
+
+# 演示看板
+streamlit>=1.38.0
+plotly>=5.23.0
+
+# ─── 旧版可选依赖（V2 不需要，仅 LSTM 涨停模型 / 策略对比脚本用）───
+# 如需启用早期 v9 LSTM 路径，安装：
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# 如需 compare_strategies.py 导出 PNG：
+#   pip install matplotlib

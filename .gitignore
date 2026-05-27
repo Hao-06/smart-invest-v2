@@ -1,0 +1,53 @@
+# 环境变量与密钥
+.env
+*.key
+
+# 数据快照缓存（体积大，可由脚本重新生成）
+data_cache/
+*.pkl
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+
+# 工具产物
+.playwright-mcp/
+.claude/
+
+# 回测输出 —— runs/ 整体屏蔽，但 V2 报告需要 commit 进库（看板/部署依赖）
+output/
+runs/*
+!runs/v2_continuous_2024_2026.json
+!runs/v2_region_*.json
+!runs/v2_recent.json
+!runs/.gitkeep
+*.log
+
+# 测试 / 备份
+*.bak
+*.bak2
+.bak_*
+作品设计书.md.bak
+docs/*.bak*
+*.tmp
+# Playwright 截图 & 微信原图 (开发期产物,不入库)
+v2_*.png
+v2_*.jpg
+dashboard_*.png
+微信图片_*.png

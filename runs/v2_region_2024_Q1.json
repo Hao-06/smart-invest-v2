@@ -1,0 +1,4080 @@
+{
+  "region": "2024 Q1",
+  "start": "2024-01-02",
+  "end": "2024-03-29",
+  "capital": 500000,
+  "final": 558299.940025,
+  "total_return_pct": 11.65998800500001,
+  "max_drawdown_pct": -7.890974799377359,
+  "hs300_return_pct": 4.475260006303183,
+  "excess_pct": 7.184727998696826,
+  "n_recommend_days": 58,
+  "n_no_action": 0,
+  "n_buys": 141,
+  "n_sells": 128,
+  "hold_days": 5,
+  "daily_equity": [
+    {
+      "date": "2024-01-02",
+      "v2_equity": 501594.40064999997,
+      "v2_pct": 0.3188801299999877,
+      "hs300_close": 3.173,
+      "hs300_pct": 0.0
+    },
+    {
+      "date": "2024-01-03",
+      "v2_equity": 504051.01745,
+      "v2_pct": 0.8102034900000055,
+      "hs300_close": 3.163,
+      "hs300_pct": -0.31515915537346784
+    },
+    {
+      "date": "2024-01-04",
+      "v2_equity": 504902.01745,
+      "v2_pct": 0.9804034899999925,
+      "hs300_close": 3.133,
+      "hs300_pct": -1.2606366214938602
+    },
+    {
+      "date": "2024-01-05",
+      "v2_equity": 507855.51745,
+      "v2_pct": 1.5711034900000032,
+      "hs300_close": 3.116,
+      "hs300_pct": -1.7964071856287456
+    },
+    {
+      "date": "2024-01-08",
+      "v2_equity": 503868.69337500003,
+      "v2_pct": 0.773738675000013,
+      "hs300_close": 3.069,
+      "hs300_pct": -3.2776552158840233
+    },
+    {
+      "date": "2024-01-09",
+      "v2_equity": 506097.73932500003,
+      "v2_pct": 1.2195478650000036,
+      "hs300_close": 3.077,
+      "hs300_pct": -3.0255278915852557
+    },
+    {
+      "date": "2024-01-10",
+      "v2_equity": 502228.33932500007,
+      "v2_pct": 0.4456678650000212,
+      "hs300_close": 3.061,
+      "hs300_pct": -3.529782540182791
+    },
+    {
+      "date": "2024-01-11",
+      "v2_equity": 499385.93932500004,
+      "v2_pct": -0.12281213499999444,
+      "hs300_close": 3.08,
+      "hs300_pct": -2.9309801449732054
+    },
+    {
+      "date": "2024-01-12",
+      "v2_equity": 501876.539325,
+      "v2_pct": 0.37530786499999635,
+      "hs300_close": 3.069,
+      "hs300_pct": -3.2776552158840233
+    },
+    {
+      "date": "2024-01-15",
+      "v2_equity": 503038.58282500005,
+      "v2_pct": 0.6077165650000049,
+      "hs300_close": 3.065,
+      "hs300_pct": -3.4037188780334127
+    },
+    {
+      "date": "2024-01-16",
+      "v2_equity": 511079.48632500006,
+      "v2_pct": 2.215897265000022,
+      "hs300_close": 3.087,
+      "hs300_pct": -2.710368736211788
+    },
+    {
+      "date": "2024-01-17",
+      "v2_equity": 505002.48632500006,
+      "v2_pct": 1.0004972650000221,
+      "hs300_close": 3.012,
+      "hs300_pct": -5.074062401512769
+    },
+    {
+      "date": "2024-01-18",
+      "v2_equity": 504455.48632500006,
+      "v2_pct": 0.8910972650000071,
+      "hs300_close": 3.057,
+      "hs300_pct": -3.6558462023321803
+    },
+    {
+      "date": "2024-01-19",
+      "v2_equity": 504446.28632500005,
+      "v2_pct": 0.8892572650000208,
+      "hs300_close": 3.064,
+      "hs300_pct": -3.4352347935707517
+    },
+    {
+      "date": "2024-01-22",
+      "v2_equity": 499224.653525,
+      "v2_pct": -0.15506929500000988,
+      "hs300_close": 2.995,
+      "hs300_pct": -5.609832965647654
+    },
+    {
+      "date": "2024-01-23",
+      "v2_equity": 499912.587025,
+      "v2_pct": -0.017482594999995715,
+      "hs300_close": 3.017,
+      "hs300_pct": -4.9164828238260405
+    },
+    {
+      "date": "2024-01-24",
+      "v2_equity": 511839.687025,
+      "v2_pct": 2.367937405000009,
+      "hs300_close": 3.068,
+      "hs300_pct": -3.3091711314213623
+    },
+    {
+      "date": "2024-01-25",
+      "v2_equity": 519487.287025,
+      "v2_pct": 3.8974574050000044,
+      "hs300_close": 3.124,
+      "hs300_pct": -1.5442798613299669
+    },
+    {
+      "date": "2024-01-26",
+      "v2_equity": 528493.687025,
+      "v2_pct": 5.698737404999998,
+      "hs300_close": 3.118,
+      "hs300_pct": -1.7333753545540564
+    },
+    {
+      "date": "2024-01-29",
+      "v2_equity": 531367.3715250001,
+      "v2_pct": 6.273474305000026,
+      "hs300_close": 3.088,
+      "hs300_pct": -2.6788528206744378
+    },
+    {
+      "date": "2024-01-30",
+      "v2_equity": 525877.305025,
+      "v2_pct": 5.175461004999993,
+      "hs300_close": 3.032,
+      "hs300_pct": -4.443744090765833
+    },
+    {
+      "date": "2024-01-31",
+      "v2_equity": 525826.805025,
+      "v2_pct": 5.165361005000002,
+      "hs300_close": 3.011,
+      "hs300_pct": -5.105578317050108
+    },
+    {
+      "date": "2024-02-01",
+      "v2_equity": 522522.805025,
+      "v2_pct": 4.504561005000007,
+      "hs300_close": 3.007,
+      "hs300_pct": -5.231641979199497
+    },
+    {
+      "date": "2024-02-02",
+      "v2_equity": 524377.805025,
+      "v2_pct": 4.875561004999995,
+      "hs300_close": 2.977,
+      "hs300_pct": -6.17711944531989
+    },
+    {
+      "date": "2024-02-05",
+      "v2_equity": 526391.36685,
+      "v2_pct": 5.278273369999997,
+      "hs300_close": 2.997,
+      "hs300_pct": -5.546801134572965
+    },
+    {
+      "date": "2024-02-06",
+      "v2_equity": 535619.555,
+      "v2_pct": 7.123911000000005,
+      "hs300_close": 3.1,
+      "hs300_pct": -2.300661834226281
+    },
+    {
+      "date": "2024-02-07",
+      "v2_equity": 532332.8550000001,
+      "v2_pct": 6.46657100000001,
+      "hs300_close": 3.129,
+      "hs300_pct": -1.3867002836432385
+    },
+    {
+      "date": "2024-02-08",
+      "v2_equity": 531203.255,
+      "v2_pct": 6.240650999999997,
+      "hs300_close": 3.151,
+      "hs300_pct": -0.6933501418216248
+    },
+    {
+      "date": "2024-02-19",
+      "v2_equity": 554059.1873999999,
+      "v2_pct": 10.811837479999987,
+      "hs300_close": 3.178,
+      "hs300_pct": 0.15757957768673947
+    },
+    {
+      "date": "2024-02-20",
+      "v2_equity": 559167.67135,
+      "v2_pct": 11.833534270000001,
+      "hs300_close": 3.19,
+      "hs300_pct": 0.5357705641348742
+    },
+    {
+      "date": "2024-02-21",
+      "v2_equity": 558281.0713500001,
+      "v2_pct": 11.65621427000001,
+      "hs300_close": 3.238,
+      "hs300_pct": 2.048534509927502
+    },
+    {
+      "date": "2024-02-22",
+      "v2_equity": 583168.8713499999,
+      "v2_pct": 16.63377426999999,
+      "hs300_close": 3.264,
+      "hs300_pct": 2.8679483138985162
+    },
+    {
+      "date": "2024-02-23",
+      "v2_equity": 576424.77135,
+      "v2_pct": 15.284954270000007,
+      "hs300_close": 3.267,
+      "hs300_pct": 2.9624960605105555
+    },
+    {
+      "date": "2024-02-26",
+      "v2_equity": 566619.742475,
+      "v2_pct": 13.323948495000003,
+      "hs300_close": 3.232,
+      "hs300_pct": 1.8594390167034458
+    },
+    {
+      "date": "2024-02-27",
+      "v2_equity": 573139.4577250001,
+      "v2_pct": 14.627891545000015,
+      "hs300_close": 3.273,
+      "hs300_pct": 3.151591553734634
+    },
+    {
+      "date": "2024-02-28",
+      "v2_equity": 569076.0577250001,
+      "v2_pct": 13.815211545000006,
+      "hs300_close": 3.237,
+      "hs300_pct": 2.017018594390163
+    },
+    {
+      "date": "2024-02-29",
+      "v2_equity": 568706.0577250001,
+      "v2_pct": 13.74121154500001,
+      "hs300_close": 3.292,
+      "hs300_pct": 3.7503939489442084
+    },
+    {
+      "date": "2024-03-01",
+      "v2_equity": 570430.857725,
+      "v2_pct": 14.086171545000003,
+      "hs300_close": 3.319,
+      "hs300_pct": 4.601323668452562
+    },
+    {
+      "date": "2024-03-04",
+      "v2_equity": 585951.659975,
+      "v2_pct": 17.190331994999998,
+      "hs300_close": 3.316,
+      "hs300_pct": 4.506775921840522
+    },
+    {
+      "date": "2024-03-05",
+      "v2_equity": 587536.8064250001,
+      "v2_pct": 17.507361285000012,
+      "hs300_close": 3.345,
+      "hs300_pct": 5.420737472423576
+    },
+    {
+      "date": "2024-03-06",
+      "v2_equity": 587580.6064250001,
+      "v2_pct": 17.51612128500002,
+      "hs300_close": 3.331,
+      "hs300_pct": 4.9795146549007185
+    },
+    {
+      "date": "2024-03-07",
+      "v2_equity": 594996.406425,
+      "v2_pct": 18.999281285000013,
+      "hs300_close": 3.312,
+      "hs300_pct": 4.380712259691144
+    },
+    {
+      "date": "2024-03-08",
+      "v2_equity": 602945.406425,
+      "v2_pct": 20.58908128500001,
+      "hs300_close": 3.322,
+      "hs300_pct": 4.695871415064601
+    },
+    {
+      "date": "2024-03-11",
+      "v2_equity": 593266.694425,
+      "v2_pct": 18.653338885000004,
+      "hs300_close": 3.37,
+      "hs300_pct": 6.208635360857229
+    },
+    {
+      "date": "2024-03-12",
+      "v2_equity": 571114.651175,
+      "v2_pct": 14.222930235000009,
+      "hs300_close": 3.375,
+      "hs300_pct": 6.366214938543968
+    },
+    {
+      "date": "2024-03-13",
+      "v2_equity": 569780.351175,
+      "v2_pct": 13.956070234999984,
+      "hs300_close": 3.354,
+      "hs300_pct": 5.7043807122596935
+    },
+    {
+      "date": "2024-03-14",
+      "v2_equity": 573086.451175,
+      "v2_pct": 14.617290235000002,
+      "hs300_close": 3.341,
+      "hs300_pct": 5.2946738102741975
+    },
+    {
+      "date": "2024-03-15",
+      "v2_equity": 568166.151175,
+      "v2_pct": 13.633230235000005,
+      "hs300_close": 3.35,
+      "hs300_pct": 5.578317050110315
+    },
+    {
+      "date": "2024-03-18",
+      "v2_equity": 570552.6905,
+      "v2_pct": 14.110538100000003,
+      "hs300_close": 3.381,
+      "hs300_pct": 6.555310431768024
+    },
+    {
+      "date": "2024-03-19",
+      "v2_equity": 569374.93635,
+      "v2_pct": 13.874987270000005,
+      "hs300_close": 3.358,
+      "hs300_pct": 5.830444374409072
+    },
+    {
+      "date": "2024-03-20",
+      "v2_equity": 571628.43635,
+      "v2_pct": 14.325687269999987,
+      "hs300_close": 3.361,
+      "hs300_pct": 5.924992121021111
+    },
+    {
+      "date": "2024-03-21",
+      "v2_equity": 567298.23635,
+      "v2_pct": 13.459647269999998,
+      "hs300_close": 3.359,
+      "hs300_pct": 5.861960289946411
+    },
+    {
+      "date": "2024-03-22",
+      "v2_equity": 555367.1363499999,
+      "v2_pct": 11.07342726999998,
+      "hs300_close": 3.328,
+      "hs300_pct": 4.884966908288679
+    },
+    {
+      "date": "2024-03-25",
+      "v2_equity": 555475.465775,
+      "v2_pct": 11.095093155000013,
+      "hs300_close": 3.309,
+      "hs300_pct": 4.286164513079105
+    },
+    {
+      "date": "2024-03-26",
+      "v2_equity": 562212.440025,
+      "v2_pct": 12.442488005000008,
+      "hs300_close": 3.32,
+      "hs300_pct": 4.632839583989901
+    },
+    {
+      "date": "2024-03-27",
+      "v2_equity": 564416.640025,
+      "v2_pct": 12.883328004999983,
+      "hs300_close": 3.282,
+      "hs300_pct": 3.4352347935707517
+    },
+    {
+      "date": "2024-03-28",
+      "v2_equity": 557767.340025,
+      "v2_pct": 11.553468005000012,
+      "hs300_close": 3.299,
+      "hs300_pct": 3.971005357705648
+    },
+    {
+      "date": "2024-03-29",
+      "v2_equity": 558299.940025,
+      "v2_pct": 11.65998800500001,
+      "hs300_close": 3.315,
+      "hs300_pct": 4.475260006303183
+    }
+  ],
+  "decisions": [
+    {
+      "as_of": "2024-01-02",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15700
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22600
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10300
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12900
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14800
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 17000
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-03",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15800
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22400
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10200
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16600
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-04",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15900
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22300
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10100
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14700
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 13300
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-05",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16000
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15200
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22100
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9900
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12600
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16600
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14500
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-08",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22200
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12600
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16600
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-09",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15300
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22200
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12600
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16600
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14400
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-10",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16300
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22400
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14600
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16700
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-11",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15700
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22400
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10100
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12900
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 17000
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14600
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-12",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22200
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10100
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12800
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14600
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-01-15",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16300
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21900
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12600
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14500
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-16",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16100
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15100
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21400
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4000
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9800
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12500
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14300
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-17",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16600
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15200
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21600
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4100
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14300
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-18",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16300
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21600
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4000
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14600
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-19",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16300
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15400
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21800
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4000
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10100
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-22",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16600
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3900
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10300
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 15200
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-23",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16500
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 22000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 4000
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10200
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 15300
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-24",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 15100
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21500
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3900
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 10000
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12300
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16500
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-25",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16000
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14900
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21200
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3900
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9800
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 12200
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14500
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 16200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-26",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16000
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14400
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9600
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11900
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14200
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15900
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-29",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16100
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 20700
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9500
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11700
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15600
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14000
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-30",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16400
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9600
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11800
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14200
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bear",
+        "probs": {
+          "trending_bear": 0.55,
+          "range_bound": 0.2,
+          "volatile": 0.15,
+          "trending_bull": 0.05,
+          "breakout": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.14,
+        "etf_defense": 0.36250000000000004,
+        "sector_rotation": 0.1375,
+        "high_dividend": 0.36000000000000004
+      }
+    },
+    {
+      "as_of": "2024-01-31",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16600
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9600
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14100
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15700
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-01",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16600
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14700
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21300
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9700
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11800
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14300
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15700
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-02",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16700
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21100
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9700
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14200
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15500
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-05",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16600
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3700
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9700
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11400
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14400
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15100
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-06",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 16100
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 20800
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3700
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9500
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11300
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14000
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 14800
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-07",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15900
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3700
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9700
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11600
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14100
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15100
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-08",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15800
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14600
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 21000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3700
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9800
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11700
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 14000
+        },
+        {
+          "symbol": "601288",
+          "symbol_name": "农业银行",
+          "volume": 15400
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-02-19",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15700
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4200
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2900
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4800
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14400
+        }
+      ],
+      "regime": {
+        "regime": "breakout",
+        "probs": {
+          "breakout": 0.55,
+          "trending_bull": 0.15,
+          "trending_bear": 0.15,
+          "range_bound": 0.1,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.255,
+        "etf_defense": 0.2575,
+        "sector_rotation": 0.30750000000000005,
+        "high_dividend": 0.18
+      }
+    },
+    {
+      "as_of": "2024-02-20",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15600
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4800
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14100
+        }
+      ],
+      "regime": {
+        "regime": "breakout",
+        "probs": {
+          "breakout": 0.55,
+          "trending_bull": 0.15,
+          "trending_bear": 0.15,
+          "range_bound": 0.1,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.255,
+        "etf_defense": 0.2575,
+        "sector_rotation": 0.30750000000000005,
+        "high_dividend": 0.18
+      }
+    },
+    {
+      "as_of": "2024-02-21",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15400
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4800
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6400
+        },
+        {
+          "symbol": "601998",
+          "symbol_name": "中信银行",
+          "volume": 8700
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-22",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4100
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2100
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15300
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6000
+        },
+        {
+          "symbol": "601699",
+          "symbol_name": "潞安环能",
+          "volume": 2000
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        },
+        {
+          "symbol": "601998",
+          "symbol_name": "中信银行",
+          "volume": 8600
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-23",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4100
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4500
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15300
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6100
+        },
+        {
+          "symbol": "601699",
+          "symbol_name": "潞安环能",
+          "volume": 2100
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-26",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4400
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15400
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4600
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "601699",
+          "symbol_name": "潞安环能",
+          "volume": 2100
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-27",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4400
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "688041",
+          "symbol_name": "688041",
+          "volume": 500
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15200
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2100
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        },
+        {
+          "symbol": "000983",
+          "symbol_name": "山西焦煤",
+          "volume": 4600
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-28",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4400
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15400
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1500
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "688041",
+          "symbol_name": "688041",
+          "volume": 600
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-02-29",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4400
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15100
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1400
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2800
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "600482",
+          "symbol_name": "600482",
+          "volume": 2300
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-01",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4500
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1400
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2200
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "000651",
+          "symbol_name": "格力电器",
+          "volume": 1400
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-04",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2000
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2600
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6000
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7000
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-05",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2000
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14900
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2600
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6100
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7100
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-06",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2000
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2600
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "600803",
+          "symbol_name": "新奥股份",
+          "volume": 2900
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-07",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 1900
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2600
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4300
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6100
+        },
+        {
+          "symbol": "000651",
+          "symbol_name": "格力电器",
+          "volume": 1400
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-08",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2000
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6000
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2600
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4400
+        },
+        {
+          "symbol": "000651",
+          "symbol_name": "格力电器",
+          "volume": 1400
+        },
+        {
+          "symbol": "600803",
+          "symbol_name": "新奥股份",
+          "volume": 2900
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-11",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1800
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6100
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14800
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2700
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1300
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7100
+        },
+        {
+          "symbol": "600803",
+          "symbol_name": "新奥股份",
+          "volume": 2800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-12",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2000
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2100
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2900
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14800
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6400
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7400
+        },
+        {
+          "symbol": "600803",
+          "symbol_name": "新奥股份",
+          "volume": 2900
+        },
+        {
+          "symbol": "600150",
+          "symbol_name": "中国船舶",
+          "volume": 1400
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-13",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6400
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14900
+        },
+        {
+          "symbol": "601009",
+          "symbol_name": "南京银行",
+          "volume": 6700
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7500
+        },
+        {
+          "symbol": "000651",
+          "symbol_name": "格力电器",
+          "volume": 1500
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "600188",
+          "volume": 2900
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-14",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14900
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7300
+        },
+        {
+          "symbol": "000408",
+          "symbol_name": "藏格矿业",
+          "volume": 1900
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4600
+        },
+        {
+          "symbol": "601009",
+          "symbol_name": "南京银行",
+          "volume": 6700
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-15",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "000408",
+          "symbol_name": "藏格矿业",
+          "volume": 1700
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6300
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14900
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7100
+        },
+        {
+          "symbol": "601009",
+          "symbol_name": "南京银行",
+          "volume": 6500
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 4500
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-18",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 121000
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 152400
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "515700",
+          "symbol_name": "新能车ETF",
+          "volume": 32300
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 6900
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14700
+        },
+        {
+          "symbol": "000408",
+          "symbol_name": "藏格矿业",
+          "volume": 1700
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-19",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 121600
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 151900
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "515700",
+          "symbol_name": "新能车ETF",
+          "volume": 32700
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7000
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14800
+        },
+        {
+          "symbol": "000408",
+          "symbol_name": "藏格矿业",
+          "volume": 1700
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-20",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 122500
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 152400
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "515700",
+          "symbol_name": "新能车ETF",
+          "volume": 32600
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6000
+        },
+        {
+          "symbol": "000408",
+          "symbol_name": "藏格矿业",
+          "volume": 1800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14800
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 6800
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-21",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 123400
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 153800
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 1900
+        },
+        {
+          "symbol": "515700",
+          "symbol_name": "新能车ETF",
+          "volume": 33000
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6000
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 6800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 14800
+        },
+        {
+          "symbol": "601009",
+          "symbol_name": "南京银行",
+          "volume": 6600
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-22",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 124600
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 154300
+        },
+        {
+          "symbol": "600938",
+          "symbol_name": "600938",
+          "volume": 2000
+        },
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 119300
+        },
+        {
+          "symbol": "601857",
+          "symbol_name": "601857",
+          "volume": 6100
+        },
+        {
+          "symbol": "601872",
+          "symbol_name": "招商轮船",
+          "volume": 7000
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "601225",
+          "symbol_name": "601225",
+          "volume": 2200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2024-03-25",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15100
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14500
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 18800
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3600
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 9100
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11400
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 13200
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 12200
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-03-26",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14400
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 18600
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3600
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 8900
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11300
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 12800
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 11900
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-03-27",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15200
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14100
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 18700
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3500
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 8900
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11200
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 12600
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 11900
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-03-28",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15100
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14200
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 19000
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3600
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 8900
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11500
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 12900
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 12100
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    },
+    {
+      "as_of": "2024-03-29",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 15000
+        },
+        {
+          "symbol": "600016",
+          "symbol_name": "民生银行",
+          "volume": 14200
+        },
+        {
+          "symbol": "601916",
+          "symbol_name": "浙商银行",
+          "volume": 18700
+        },
+        {
+          "symbol": "601166",
+          "symbol_name": "兴业银行",
+          "volume": 3800
+        },
+        {
+          "symbol": "600015",
+          "symbol_name": "华夏银行",
+          "volume": 8900
+        },
+        {
+          "symbol": "601398",
+          "symbol_name": "工商银行",
+          "volume": 11400
+        },
+        {
+          "symbol": "601077",
+          "symbol_name": "601077",
+          "volume": 12900
+        },
+        {
+          "symbol": "601658",
+          "symbol_name": "邮储银行",
+          "volume": 12100
+        }
+      ],
+      "regime": {
+        "regime": "range_bound",
+        "probs": {
+          "trending_bull": 0.1,
+          "trending_bear": 0.1,
+          "range_bound": 0.4,
+          "breakout": 0.1,
+          "volatile": 0.3
+        },
+        "confidence": 0.4
+      },
+      "weights": {
+        "momentum": 0.18,
+        "etf_defense": 0.375,
+        "sector_rotation": 0.17500000000000002,
+        "high_dividend": 0.27
+      }
+    }
+  ]
+}

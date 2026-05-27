@@ -1,0 +1,620 @@
+{
+  "region": "近 2 周(5/12-5/25)",
+  "start": "2026-05-12",
+  "end": "2026-05-25",
+  "capital": 500000,
+  "final": 531027.6553,
+  "total_return_pct": 6.205531059999991,
+  "max_drawdown_pct": -4.182162886973284,
+  "hs300_return_pct": -0.5238766874874012,
+  "excess_pct": 6.729407747487393,
+  "n_recommend_days": 10,
+  "n_no_action": 0,
+  "n_buys": 27,
+  "n_sells": 23,
+  "hold_days": 5,
+  "daily_equity": [
+    {
+      "date": "2026-05-12",
+      "v2_equity": 501025.85337499995,
+      "v2_pct": 0.2051706749999882,
+      "hs300_close": 4.963,
+      "hs300_pct": 0.0
+    },
+    {
+      "date": "2026-05-13",
+      "v2_equity": 519325.76722499996,
+      "v2_pct": 3.8651534450000025,
+      "hs300_close": 5.017,
+      "hs300_pct": 1.0880515817046188
+    },
+    {
+      "date": "2026-05-14",
+      "v2_equity": 517080.767225,
+      "v2_pct": 3.416153445000014,
+      "hs300_close": 4.941,
+      "hs300_pct": -0.443280274027813
+    },
+    {
+      "date": "2026-05-15",
+      "v2_equity": 514370.367225,
+      "v2_pct": 2.8740734449999916,
+      "hs300_close": 4.878,
+      "hs300_pct": -1.7126737860165164
+    },
+    {
+      "date": "2026-05-18",
+      "v2_equity": 516660.85099999997,
+      "v2_pct": 3.332170199999984,
+      "hs300_close": 4.852,
+      "hs300_pct": -2.2365504735039288
+    },
+    {
+      "date": "2026-05-19",
+      "v2_equity": 530068.1052499999,
+      "v2_pct": 6.013621049999984,
+      "hs300_close": 4.869,
+      "hs300_pct": -1.8940157163006344
+    },
+    {
+      "date": "2026-05-20",
+      "v2_equity": 532090.7052499999,
+      "v2_pct": 6.418141049999981,
+      "hs300_close": 4.871,
+      "hs300_pct": -1.853717509570818
+    },
+    {
+      "date": "2026-05-21",
+      "v2_equity": 509837.80525,
+      "v2_pct": 1.9675610499999996,
+      "hs300_close": 4.808,
+      "hs300_pct": -3.1231110215595437
+    },
+    {
+      "date": "2026-05-22",
+      "v2_equity": 518281.60524999996,
+      "v2_pct": 3.65632105,
+      "hs300_close": 4.862,
+      "hs300_pct": -2.035059439854925
+    },
+    {
+      "date": "2026-05-25",
+      "v2_equity": 531027.6553,
+      "v2_pct": 6.205531059999991,
+      "hs300_close": 4.937,
+      "hs300_pct": -0.5238766874874012
+    }
+  ],
+  "decisions": [
+    {
+      "as_of": "2026-05-12",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 45500
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 45000
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "兖矿能源",
+          "volume": 2300
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 27500
+        },
+        {
+          "symbol": "300782",
+          "symbol_name": "卓胜微",
+          "volume": 400
+        },
+        {
+          "symbol": "300661",
+          "symbol_name": "圣邦股份",
+          "volume": 400
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10000
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 3000
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-13",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 44300
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 43200
+        },
+        {
+          "symbol": "688041",
+          "symbol_name": "688041",
+          "volume": 100
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 26800
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "兖矿能源",
+          "volume": 2400
+        },
+        {
+          "symbol": "002648",
+          "symbol_name": "卫星化学",
+          "volume": 1700
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 9900
+        },
+        {
+          "symbol": "600023",
+          "symbol_name": "浙能电力",
+          "volume": 8300
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-14",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 45400
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 44100
+        },
+        {
+          "symbol": "688041",
+          "symbol_name": "688041",
+          "volume": 100
+        },
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 32300
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "兖矿能源",
+          "volume": 2400
+        },
+        {
+          "symbol": "002648",
+          "symbol_name": "卫星化学",
+          "volume": 1800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10100
+        },
+        {
+          "symbol": "600023",
+          "symbol_name": "浙能电力",
+          "volume": 8200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-15",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 45700
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 45100
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "兖矿能源",
+          "volume": 2300
+        },
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 33300
+        },
+        {
+          "symbol": "688041",
+          "symbol_name": "688041",
+          "volume": 100
+        },
+        {
+          "symbol": "002648",
+          "symbol_name": "卫星化学",
+          "volume": 1700
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10200
+        },
+        {
+          "symbol": "600023",
+          "symbol_name": "浙能电力",
+          "volume": 8200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-18",
+      "n_recs": 8,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 45100
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 44300
+        },
+        {
+          "symbol": "300661",
+          "symbol_name": "圣邦股份",
+          "volume": 400
+        },
+        {
+          "symbol": "515880",
+          "symbol_name": "通信ETF",
+          "volume": 32900
+        },
+        {
+          "symbol": "600188",
+          "symbol_name": "兖矿能源",
+          "volume": 2200
+        },
+        {
+          "symbol": "601898",
+          "symbol_name": "中煤能源",
+          "volume": 2800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10300
+        },
+        {
+          "symbol": "600023",
+          "symbol_name": "浙能电力",
+          "volume": 8100
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-19",
+      "n_recs": 4,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 43500
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 26700
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 44200
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-20",
+      "n_recs": 4,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 41600
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 25800
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 43800
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-21",
+      "n_recs": 4,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 43100
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 26800
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 45700
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10300
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-22",
+      "n_recs": 4,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 42100
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 26400
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 43300
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10200
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    },
+    {
+      "as_of": "2026-05-25",
+      "n_recs": 4,
+      "recs": [
+        {
+          "symbol": "512760",
+          "symbol_name": "半导体ETF",
+          "volume": 39400
+        },
+        {
+          "symbol": "588000",
+          "symbol_name": "科创50ETF",
+          "volume": 25000
+        },
+        {
+          "symbol": "515050",
+          "symbol_name": "5G通信ETF",
+          "volume": 41400
+        },
+        {
+          "symbol": "510300",
+          "symbol_name": "沪深300ETF",
+          "volume": 10100
+        }
+      ],
+      "regime": {
+        "regime": "trending_bull",
+        "probs": {
+          "trending_bull": 0.55,
+          "breakout": 0.2,
+          "range_bound": 0.15,
+          "trending_bear": 0.05,
+          "volatile": 0.05
+        },
+        "confidence": 0.55
+      },
+      "weights": {
+        "momentum": 0.28750000000000003,
+        "etf_defense": 0.255,
+        "sector_rotation": 0.30500000000000005,
+        "high_dividend": 0.1525
+      }
+    }
+  ]
+}
