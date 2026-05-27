@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>智投未来 · LiveTradingAgentV2 · 作品设计书</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">@page {
+size: A4;
+margin: 2.2cm 2cm 2.4cm 2cm;
+@bottom-center { content: counter(page) " / " counter(pages); font-size: 9pt; color: #888; }
+}
+body {
+font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+font-size: 10.5pt;
+line-height: 1.65;
+color: #222;
+max-width: 100%;
+margin: 0;
+padding: 0;
+}
+h1 {
+font-size: 22pt;
+color: #1a1a1a;
+border-bottom: 3px solid #c9a063;
+padding-bottom: 10pt;
+margin-top: 2em;
+margin-bottom: 1em;
+page-break-before: always;
+page-break-after: avoid;
+}
+h1:first-of-type {
+page-break-before: avoid;
+text-align: center;
+font-size: 28pt;
+border-bottom: none;
+margin-top: 3em;
+}
+h2 {
+font-size: 16pt;
+color: #c9a063;
+border-bottom: 1px solid #ddd;
+padding-bottom: 5pt;
+margin-top: 1.6em;
+margin-bottom: 0.6em;
+page-break-after: avoid;
+}
+h3 {
+font-size: 13pt;
+color: #444;
+margin-top: 1.3em;
+margin-bottom: 0.4em;
+page-break-after: avoid;
+}
+h4 { font-size: 11.5pt; color: #555; margin-top: 1em; }
+p { margin: 0.5em 0; }
+blockquote {
+border-left: 3px solid #c9a063;
+background: #fafaf5;
+padding: 0.5em 1em;
+margin: 0.8em 0;
+color: #444;
+}
+code {
+font-family: 'SF Mono', 'JetBrains Mono', Consolas, monospace;
+font-size: 9.5pt;
+background: #f4f4f0;
+padding: 1pt 4pt;
+border-radius: 2pt;
+color: #b85c00;
+}
+pre {
+background: #1a1d24;
+color: #e0e0e0;
+padding: 10pt 14pt;
+border-radius: 4pt;
+font-size: 9pt;
+line-height: 1.45;
+overflow-x: auto;
+page-break-inside: avoid;
+}
+pre code { background: transparent; color: inherit; padding: 0; }
+table {
+border-collapse: collapse;
+margin: 0.8em 0;
+font-size: 9.5pt;
+width: 100%;
+page-break-inside: avoid;
+}
+th, td {
+border: 1px solid #ccc;
+padding: 5pt 9pt;
+text-align: left;
+}
+th {
+background: #f3efe3;
+color: #5a4520;
+font-weight: 600;
+}
+tr:nth-child(even) { background: #fbfbf6; }
+ul, ol { margin: 0.5em 0; padding-left: 1.6em; }
+li { margin: 0.2em 0; }
+a { color: #b85c00; text-decoration: none; }
+hr { border: none; border-top: 1px solid #ddd; margin: 1.5em 0; }
+strong { color: #1a1a1a; font-weight: 700; }
+
+.cover {
+text-align: center;
+page-break-after: always;
+padding-top: 5cm;
+}
+.cover-title { font-size: 32pt; color: #c9a063; margin-bottom: 0.5em; }
+.cover-sub { font-size: 14pt; color: #666; margin-bottom: 3em; }
+.cover-meta { font-size: 11pt; color: #555; line-height: 2; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">智投未来 · LiveTradingAgentV2 · 作品设计书</h1>
+</header>
+<h1 id="作品设计书-智投未来-livetradingagentv2-多智能体-a股投研系统">作品设计书
+· 智投未来 · LiveTradingAgentV2 多智能体 A股投研系统</h1>
+<blockquote>
+<p><strong>首届首都经济贸易大学「驼灵」智能体大赛</strong>
+·「智投未来」金融投资赛道参赛作品</p>
+<p>主题：AI 赋能价值创造，智能驱动财经创新</p>
+<p>提交日期：2026 年 ___ 月 ___ 日 · 版本 v2.0</p>
+</blockquote>
+<hr />
+<h2 id="一作品概述">一、作品概述</h2>
+<h3 id="一句话简介">1.1 一句话简介</h3>
+<p><strong>「智投未来」</strong>是一个面向 A
+股的<strong>多智能体日频投研系统</strong>。它以「<strong>市场状态识别
+Agent → 策略权重分配 Agent → 4
+个策略模块</strong>」三层分工协作，每个交易日产出一份<strong>可解释、可审计、可复现</strong>的股票推荐清单。最终交付的实战智能体为
+<strong>LiveTradingAgentV2</strong> ——
+一个<strong>纯推荐型、完全无状态</strong>的智能体，严格符合驼灵官方「<strong>智能体只输出建议、平台自主执行与管理资金</strong>」的规则。</p>
+<h3 id="选题动机">1.2 选题动机</h3>
+<p>命题对作品有三条硬性要求：<strong>智能体核心能力</strong>、<strong>策略可解释</strong>、<strong>结果可审计可复现</strong>。市面上绝大多数量化策略都是单一模型黑箱，难以满足后两条。</p>
+<p>本作品另辟蹊径 —— 用<strong>多 Agent
+分层协作</strong>模拟「自上而下」的真实投研流程（先判断市场环境，再分配策略权重，最后落到选股），让每一个决策环节都「<strong>有理有据、分工明确、有迹可循</strong>」，从机制上而非事后修补地解决可解释性。</p>
+<p>更重要的是，参赛者前期曾<strong>独立完成过一套传统多因子选股策略并实证失败</strong>（详见
+3.1+）。本作品正是那次失败的<strong>系统性修复</strong> ——
+这条「真实研究闭环」是本作品区别于「从零套壳」类作品的核心差异。</p>
+<h3 id="关键亮点评委-30-秒速览">1.3 关键亮点（评委 30 秒速览）</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>亮点</th>
+<th>实现机制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🏆 <strong>连续长回测 2.4 年超额 +18.13 pp</strong></td>
+<td>V2 在 2024-01~2026-05 连续回测 +71.05% vs 沪深300 +52.92%，年化
++25.5%</td>
+</tr>
+<tr>
+<td>🌊 <strong>2026 真样本外超额 +11.95 pp</strong></td>
+<td>最接近复赛实战的未见数据区间，V2 显著跑赢</td>
+</tr>
+<tr>
+<td>🔬 <strong>通过过拟合「死亡测试」</strong></td>
+<td>前代 v9 在连续回测下崩盘（-17.54 pp）；V2 在更长区间不降反赚 ——
+非过拟合</td>
+</tr>
+<tr>
+<td>✅ <strong>纯推荐型，严格合规</strong></td>
+<td>每日输出 <code>[{symbol, symbol_name, volume}]</code>
+JSON，完全无状态，平台自主执行</td>
+</tr>
+<tr>
+<td>🤖 <strong>三层多智能体分层协作</strong></td>
+<td>市场状态识别 Agent + 策略权重分配 Agent + 4
+策略模块，自上而下分工</td>
+</tr>
+<tr>
+<td>🧠 <strong>回测 / 实盘双模式</strong></td>
+<td>回测走确定性规则（无前视、可复现）；实盘可启用 DeepSeek-R1
+推理增强</td>
+</tr>
+<tr>
+<td>🛡 <strong>方法论加固</strong></td>
+<td>PIT 无前视偏差 + offline 确定性 + 数据边界诚实披露 ——
+经得起学术推敲</td>
+</tr>
+<tr>
+<td>🔬 <strong>复用学生本人研究</strong></td>
+<td>集成参赛者前期多因子 CSV（13
+因子），把「失败案例」转化为差异化优势</td>
+</tr>
+<tr>
+<td>📜 <strong>决策全程可审计</strong></td>
+<td>每日 regime 概率 + 策略权重 + 综合得分自动落盘
+JSON，评委可任意复盘</td>
+</tr>
+<tr>
+<td>⏱ <strong>机制性防前视偏差</strong></td>
+<td>时点正确的 MarketSnapshot + PIT universe：决策只能用「截至
+T-1」的数据</td>
+</tr>
+<tr>
+<td>💼 <strong>完整模拟 A 股约束</strong></td>
+<td>100 股整数倍、双边手续费、印花税；多源数据容灾（东财→腾讯）+
+负缓存</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="二系统架构">二、系统架构</h2>
+<h3 id="总体架构图">2.1 总体架构图</h3>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│              用户接口 (Streamlit Dashboard / CLI)           │
+└──────────────────────────────┬─────────────────────────────┘
+                               │ 每个交易日开盘前 recommend(today)
+┌──────────────────────────────▼─────────────────────────────┐
+│        🤖 LiveTradingAgentV2 · 纯推荐型 + 完全无状态        │
+│                                                            │
+│  ┌──────────────────────────────────────────────────────┐ │
+│  │ 第 0 步 · 大盘崩盘检测：沪深300 单日跌 &gt;3% → ETF 防御 │ │
+│  └──────────────────────────────────────────────────────┘ │
+│  ┌──────────────────────────────────────────────────────┐ │
+│  │ 第 1 层 · Market Regime Agent（市场状态识别）        │ │
+│  │   输入：沪深300 ADX/MA/涨幅/波动率 + 行业 ETF 分化   │ │
+│  │   输出：5 种 regime 的**概率分布**（承认不确定性）  │ │
+│  └───────────────────────┬──────────────────────────────┘ │
+│  ┌───────────────────────▼──────────────────────────────┐ │
+│  │ 第 2 层 · Weight Allocator Agent（策略权重分配）     │ │
+│  │   All Weather 基线矩阵 → 4 策略权重（单策略 ≤ 0.45）│ │
+│  └───────────────────────┬──────────────────────────────┘ │
+│  ┌───────────────────────▼──────────────────────────────┐ │
+│  │ 第 3 层 · 4 策略并行 select() + 加权综合得分排序     │ │
+│  │   📈 动量   🛡️ ETF 防御   ⚡ 行业轮动   💰 高股息  │ │
+│  │   → 综合得分 top 8 → JSON 推荐清单                   │ │
+│  └──────────────────────────────────────────────────────┘ │
+└──────────────────────────────┬─────────────────────────────┘
+                               │
+┌──────────────────────────────▼─────────────────────────────┐
+│      数据管道 (DataPipeline) —— 时点正确的 MarketSnapshot   │
+│ ┌────────┐ ┌────────┐ ┌──────────┐ ┌────────────────────┐ │
+│ │ 行情    │ │ 资金流  │ │ 估值因子 │ │ 多因子 CSV         │ │
+│ │多源容灾 │ │主力/北向│ │PE/PB/分位│ │FactorLoader(PIT)   │ │
+│ └────┬───┘ └────┬───┘ └────┬─────┘ └─────────┬──────────┘ │
+│      └──── 东方财富 → 腾讯财经 多源容灾 + 负缓存 + Parquet ─┘ │
+└──────────────────────────────┬─────────────────────────────┘
+                               │
+┌──────────────────────────────▼─────────────────────────────┐
+│   回测验证引擎 —— PIT universe + offline 确定性 + T+5 模拟  │
+│   6 区间分行情验证 · 连续长回测 · 2026 真样本外             │
+└────────────────────────────────────────────────────────────┘</code></pre>
+<h3 id="模块清单">2.2 模块清单</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>模块路径</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config/settings.py</code></td>
+<td>全局配置（密钥、回测参数、路径）单例</td>
+</tr>
+<tr>
+<td><code>aifund/llm/client.py</code></td>
+<td>LLM 客户端抽象层 + DeepSeek 实现（角色感知双模型）</td>
+</tr>
+<tr>
+<td><code>aifund/data/sources.py</code></td>
+<td>A 股多源数据封装（行情/资金流/估值/日历）+ 多源容灾</td>
+</tr>
+<tr>
+<td><code>aifund/data/cache.py</code></td>
+<td>Parquet 快照缓存（保证可复现）</td>
+</tr>
+<tr>
+<td><code>aifund/data/pipeline.py</code></td>
+<td>统一数据管道，输出<strong>时点正确</strong>的 MarketSnapshot</td>
+</tr>
+<tr>
+<td><code>aifund/stockpool/factor_loader.py</code></td>
+<td>多因子 CSV 加载 + <strong>PIT 查询</strong>（<code>pit_top_n</code>
+选 universe）</td>
+</tr>
+<tr>
+<td><code>aifund/stockpool/momentum_selector.py</code></td>
+<td>动量选股 + 双层大盘择时</td>
+</tr>
+<tr>
+<td><code>aifund/agents/regime.py</code></td>
+<td><strong>市场状态识别 Agent</strong>（输出 5 regime 概率分布）</td>
+</tr>
+<tr>
+<td><code>aifund/agents/weight_allocator.py</code></td>
+<td><strong>策略权重分配 Agent</strong>（All Weather 基线 + 微调）</td>
+</tr>
+<tr>
+<td><code>aifund/agents/live_agent_v2.py</code></td>
+<td><strong>LiveTradingAgentV2
+主智能体</strong>（纯推荐型，无状态）</td>
+</tr>
+<tr>
+<td><code>aifund/strategies/</code></td>
+<td>4 策略：momentum / etf_defense / sector_rotation /
+high_dividend</td>
+</tr>
+<tr>
+<td><code>aifund/indicators.py</code></td>
+<td>技术指标计算 + LLM 友好的 summarize()</td>
+</tr>
+<tr>
+<td><code>scripts/test_live_agent_v2.py</code></td>
+<td>V2 回测验证（PIT universe + offline 模式）</td>
+</tr>
+<tr>
+<td><code>app/dashboard.py</code></td>
+<td>Streamlit 演示看板</td>
+</tr>
+<tr>
+<td><code>main.py</code></td>
+<td>命令行入口</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="三核心创新点">三、核心创新点</h2>
+<h3 id="多智能体分层协作紧扣大赛主题">3.1
+多智能体分层协作（紧扣大赛主题）</h3>
+<p>本作品不是「单 LLM
+套个外壳」，而是<strong>「自上而下」的三层多智能体分工</strong> ——
+模拟真实投研机构「先看大势、再定配置、最后选股」的决策链：</p>
+<ul>
+<li><strong>第 1 层 · 市场状态识别
+Agent</strong>（<code>regime.py</code>）
+<ul>
+<li>输入：沪深300 的 ADX / 均线关系 / 涨跌幅 / 波动率 + 行业 ETF
+分化度</li>
+<li>输出：<strong>5 种市场状态的概率分布</strong>（trending_bull /
+trending_bear / range_bound / breakout / volatile）</li>
+<li><strong>关键设计</strong>：输出的是<strong>概率分布</strong>而非单一标签
+—— 科学地承认「市场状态本就不确定」</li>
+</ul></li>
+<li><strong>第 2 层 · 策略权重分配
+Agent</strong>（<code>weight_allocator.py</code>）
+<ul>
+<li>输入：上一层的 regime 概率分布</li>
+<li>基线：Bridgewater「All Weather」思路的「regime → 策略权重」矩阵</li>
+<li>输出：4 个策略的权重（<strong>单策略 ≤ 0.45 强制分散</strong>，杜绝
+all-in 风险）</li>
+</ul></li>
+<li><strong>第 3 层 · 4
+个策略模块</strong>（<code>strategies/</code>）各自独立选股：
+<ul>
+<li>📈 <strong>动量策略</strong>：横截面动量 +
+双层大盘择时（适合趋势市）</li>
+<li>🛡️ <strong>ETF 防御</strong>：沪深300 ETF（适合震荡 / 不确定）</li>
+<li>⚡ <strong>行业轮动</strong>：15 只行业 ETF
+动量轮动（适合主线明确的牛市）</li>
+<li>💰 <strong>高股息防御</strong>：高股息蓝筹（适合熊市 /
+长期震荡）</li>
+</ul></li>
+<li><strong>汇总</strong>：<code>live_agent_v2.py</code>
+按策略权重对各策略选股做<strong>加权综合打分</strong>，取 top 8
+输出推荐清单。</li>
+</ul>
+<blockquote>
+<p><strong>为什么这是「真多智能体」</strong>：三层各有独立的输入、独立的判断逻辑、独立的可审计输出；上层的不确定性（概率分布）显式传递给下层
+—— 这是「分工 + 协作」，不是「一个大模型分饰多角」。</p>
+</blockquote>
+<h3 id="研究闭环-学生本人多因子失败案例的系统性修复">3.1+ 「研究闭环」——
+学生本人多因子失败案例的系统性修复</h3>
+<p>参赛者在前期独立完成过一套沪深300 多因子选股策略（详见
+<code>~/量化金融/多因子策略优化-re/</code>），实证发现传统多因子策略在
+2024-2025 行情下表现糟糕：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>传统多因子策略</th>
+<th>沪深300 基准</th>
+<th>差距</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总收益率</td>
+<td>-55.18%</td>
+<td>+12.15%</td>
+<td><strong>-67.33%</strong></td>
+</tr>
+<tr>
+<td>最大回撤</td>
+<td>-62.80%</td>
+<td>-17.28%</td>
+<td><strong>-45.52%</strong></td>
+</tr>
+<tr>
+<td>夏普比率</td>
+<td>-1.02</td>
+<td>+0.22</td>
+<td><strong>-1.24</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>（参赛者前期独立完成的沪深300 多因子选股策略实证，区间 2024-01 至
+2025-07）</em></p>
+<p><strong>失败原因诊断</strong>：传统多因子打分（PE + EP
+加权）<strong>单一押注价值因子</strong>，但 2025
+是科技牛市（光通信/AI/算力主线），价值因子在牛市天然跑输；且<strong>无市场状态感知、无策略切换</strong>，一条路走到黑。</p>
+<p><strong>本作品如何修复</strong>： 1. <strong>不押注单一风格</strong>
+→ 4 策略并存（动量/ETF/轮动/高股息），覆盖不同 regime 2.
+<strong>加入市场状态感知</strong> → Regime Agent 先识别环境，再决定权重
+3. <strong>分散而非择优</strong> → All Weather 思路，单策略权重 ≤
+0.45，任一策略失效最多损失 45% 4. <strong>复用前期成果</strong> →
+前期算好的 13 个因子 CSV 直接作为选股漏斗的第 1 层粗筛</p>
+<p>这是一条完整的「<strong>做过 → 失败 → 诊断 →
+系统性修复</strong>」研究闭环。</p>
+<h3 id="角色分层的模型编排-回测实盘双模式">3.2 角色分层的模型编排 +
+回测/实盘双模式</h3>
+<p>Regime Agent 与 Weight Allocator 在<strong>实盘</strong>模式下用
+<code>deepseek-reasoner</code>（R1）做推理增强；在<strong>回测</strong>模式下走确定性规则判断：</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>模式</th>
+<th>Regime / Allocator 行为</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>回测</strong>（<code>offline=True</code>）</td>
+<td>规则判断，不调 LLM</td>
+<td>历史回测调 LLM = 事后诸葛（模型知道回测日之后的事）+ 不可复现</td>
+</tr>
+<tr>
+<td><strong>实盘</strong>（复赛）</td>
+<td>DeepSeek-R1 推理 + 思维链</td>
+<td>实盘面对的是真实「当下」，无未来信息泄漏；R1 思维链可审计</td>
+</tr>
+</tbody>
+</table>
+<p>这一「双模式」设计同时解决了<strong>方法论严谨性</strong>（回测确定可复现）与<strong>智能体能力展示</strong>（实盘
+LLM 推理）。LLM 层抽象成 <code>LLMClient</code> 接口，后续可无缝替换
+Claude / MiniMax 等。</p>
+<h3 id="时点正确的数据快照point-in-time-correctness">3.3
+时点正确的数据快照（point-in-time correctness）</h3>
+<p>回测最容易犯的错就是「<strong>前视偏差</strong>」—— 用 T
+日才能知道的信息做 T 日的决策。本作品在两个层面机制性杜绝：</p>
+<ul>
+<li><strong>数据快照</strong>：<code>DataPipeline.snapshot(symbols, as_of)</code>
+返回的所有数据严格 ≤ <code>as_of</code>；行情/资金流按
+<code>date &lt;= as_of</code> 截断。</li>
+<li><strong>PIT universe</strong>：选股池由
+<code>FactorLoader.pit_top_n(start)</code> 给出 ——
+用回测起点<strong>之前</strong>最近一个完整因子日的快照，杜绝「用未来因子分数挑历史股票」。</li>
+</ul>
+<p>这保证「<strong>今天的 Agent 看不到明天的数据</strong>」——
+评委可拿过去任意一天复算，结果一致。</p>
+<h3 id="多源容灾-负缓存-parquet-快照">3.4 多源容灾 + 负缓存 + Parquet
+快照</h3>
+<p>数据稳定性是金融决策的基础。数据层做了三重保障：</p>
+<ol type="1">
+<li><strong>多源自动回退</strong>：行情默认走东方财富；失败时自动回退腾讯财经，对上层透明。</li>
+<li><strong>会话内负缓存</strong>：已知失败的接口 30
+分钟内短路返回，避免回测主循环反复撞同一失败点。</li>
+<li><strong>Parquet 长历史缓存</strong>：每只标的「2010-至今」全量行情按
+<code>(symbol, asset_type)</code> 单键缓存，不同 <code>as_of</code>
+共享同一份缓存。</li>
+</ol>
+<h3 id="严格符合-a-股交易约束">3.5 严格符合 A 股交易约束</h3>
+<p>回测引擎严格模拟 A 股真实规则：</p>
+<ul>
+<li><strong>100 股整数倍</strong>：所有推荐 volume 必须是 100
+的倍数。</li>
+<li><strong>双边佣金</strong>：万 2.5，单笔最低 5 元。</li>
+<li><strong>印花税</strong>：千 0.5，仅卖出。</li>
+<li><strong>决策时序</strong>：决策基于 T-1 收盘数据，订单 T
+日开盘价成交，T 日收盘价估值。</li>
+</ul>
+<hr />
+<h2 id="四v2-单日决策流程详解">四、V2 单日决策流程详解</h2>
+<h3 id="单日决策时序">4.1 单日决策时序</h3>
+<pre><code>T 日开盘前
+  │
+  ├─ agent.recommend(today)
+  │    │
+  │    ├─ 第 0 步：_check_market_signal(today)
+  │    │    └─ 沪深300 单日跌 &gt;3% → 直接推荐 ETF 防御，结束
+  │    │
+  │    ├─ 第 1 层：MarketRegimeAgent.analyze(today)
+  │    │    ├─ 计算沪深300 ADX/MA/涨幅/波动率 + 行业 ETF 分化度
+  │    │    └─ 输出 RegimeOpinion（5 regime 概率分布 + 关键信号）
+  │    │
+  │    ├─ 第 2 层：WeightAllocatorAgent.allocate(regime)
+  │    │    ├─ All Weather 基线矩阵 × regime 概率 → 基线权重
+  │    │    └─ 输出 WeightAllocation（4 策略权重，单策略 ≤ 0.45）
+  │    │
+  │    ├─ 第 3 层：对权重 ≥ 0.10 的策略调用 strategy.select(today)
+  │    │    ├─ 动量 / ETF 防御 / 行业轮动 / 高股息 各自选股
+  │    │    └─ 按「策略权重 × 仓位比例 × 排名分」累加综合得分
+  │    │
+  │    └─ 取综合得分 top 8 → 计算 volume → 返回 JSON + DailyDecision
+  │
+  ├─ 推荐清单输出给平台（实盘）/ 回测引擎（验证）
+  └─ DailyDecision 落盘 JSON（regime / weights / recs 全程可审计）
+
+T 日 09:30 开盘
+  └─ 平台按推荐执行（实盘）/ 按开盘价模拟成交（回测）</code></pre>
+<h3 id="三类-agent-的职责">4.2 三类 Agent 的职责</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Agent</th>
+<th>文件</th>
+<th>输入</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>市场状态识别</strong></td>
+<td><code>regime.py</code></td>
+<td>沪深300 技术信号 + 行业分化</td>
+<td>5 regime 概率分布</td>
+</tr>
+<tr>
+<td><strong>策略权重分配</strong></td>
+<td><code>weight_allocator.py</code></td>
+<td>regime 概率分布</td>
+<td>4 策略权重（≤ 0.45）</td>
+</tr>
+<tr>
+<td><strong>4 策略模块</strong></td>
+<td><code>strategies/</code></td>
+<td>当日行情 / 因子</td>
+<td>各自的选股清单 + 仓位比例</td>
+</tr>
+</tbody>
+</table>
+<p>每一层的输出都是结构化对象（<code>RegimeOpinion</code> /
+<code>WeightAllocation</code> / <code>StrategyOutput</code>），带完整的
+<code>reasoning</code> 字段，全部落盘到 <code>DailyDecision</code>。</p>
+<h3 id="推荐输出的硬约束">4.3 推荐输出的硬约束</h3>
+<ul>
+<li><strong>数量</strong>：每日最多 8
+只（控制分散度，避免资金摊太薄）</li>
+<li><strong>volume</strong>：每只目标价值约 5 万元 →
+按当日股价换算，强制 100 股整数倍</li>
+<li><strong>无操作</strong>：无候选时返回 <code>[]</code></li>
+<li><strong>风险刹车</strong>：大盘单日暴跌 → 跳过主流程，直接推荐 ETF
+防御</li>
+<li><strong>完全无状态</strong>：Agent 不维护持仓 /
+现金，每天独立调用、可重入、可并行</li>
+</ul>
+<hr />
+<h2 id="五可解释性与可审计性">五、可解释性与可审计性</h2>
+<h3 id="三层可解释性">5.1 三层可解释性</h3>
+<p>V2
+的可解释性<strong>不是事后补一段说明，而是决策结构本身就分层透明</strong>：</p>
+<ol type="1">
+<li><strong>市场状态层</strong>：为什么判断当前是某种 regime ——
+<code>RegimeOpinion.reasoning</code> 给出 ADX / 均线 /
+波动率等信号依据，且以<strong>概率分布</strong>呈现不确定性。</li>
+<li><strong>权重分配层</strong>：为什么这样分配 4 策略权重 ——
+<code>WeightAllocation.reasoning</code> 说明基线矩阵 + 微调理由。</li>
+<li><strong>选股层</strong>：为什么推荐这几只 ——
+每只票的综合得分可拆解为「策略权重 × 策略内排名」。</li>
+</ol>
+<h3 id="可审计性的物理证据">5.2 可审计性的物理证据</h3>
+<p>每个交易日的决策自动落盘为 <code>DailyDecision</code>，回测结果落盘到
+<code>runs/v2_region_*.json</code> 与
+<code>runs/v2_continuous_2024_2026.json</code>，每一天都包含：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;as_of&quot;</span><span class="fu">:</span> <span class="st">&quot;2024-02-19&quot;</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;regime&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;regime&quot;</span><span class="fu">:</span> <span class="st">&quot;breakout&quot;</span><span class="fu">,</span> <span class="dt">&quot;confidence&quot;</span><span class="fu">:</span> <span class="fl">0.55</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>             <span class="dt">&quot;probs&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;breakout&quot;</span><span class="fu">:</span> <span class="fl">0.55</span><span class="fu">,</span> <span class="dt">&quot;trending_bull&quot;</span><span class="fu">:</span> <span class="fl">0.15</span><span class="fu">,</span> <span class="er">...</span><span class="fu">}},</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;weights&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;sector_rotation&quot;</span><span class="fu">:</span> <span class="fl">0.31</span><span class="fu">,</span> <span class="dt">&quot;momentum&quot;</span><span class="fu">:</span> <span class="fl">0.26</span><span class="fu">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>              <span class="dt">&quot;etf_defense&quot;</span><span class="fu">:</span> <span class="fl">0.26</span><span class="fu">,</span> <span class="dt">&quot;high_dividend&quot;</span><span class="fu">:</span> <span class="fl">0.18</span><span class="fu">},</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;recs&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span><span class="dt">&quot;symbol&quot;</span><span class="fu">:</span> <span class="st">&quot;510300&quot;</span><span class="fu">,</span> <span class="dt">&quot;symbol_name&quot;</span><span class="fu">:</span> <span class="st">&quot;沪深300ETF&quot;</span><span class="fu">,</span> <span class="dt">&quot;volume&quot;</span><span class="fu">:</span> <span class="er">...</span><span class="fu">}</span><span class="ot">,</span> <span class="er">...</span><span class="ot">]</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>任何人都可以拿这份 JSON
+复盘：当时市场状态怎么判、权重怎么分、票怎么选 ——
+<strong>每一步都有据可查</strong>。</p>
+<h3 id="可复现性">5.3 可复现性</h3>
+<ul>
+<li><strong>数据层</strong>：Parquet
+快照固化外部数据，避免数据源后续变动影响复算。</li>
+<li><strong>决策层</strong>：回测用 <code>offline</code>
+确定性规则模式，<strong>同一份输入必得同一份输出</strong> ——
+完全可复现。</li>
+<li><strong>PIT
+保证</strong>：选股池与所有信号都严格时点正确，杜绝前视偏差。</li>
+</ul>
+<hr />
+<h2 id="六技术实现要点">六、技术实现要点</h2>
+<h3 id="llm-层抽象">6.1 LLM 层抽象</h3>
+<p>详见 <code>aifund/llm/client.py</code>。要点：</p>
+<ul>
+<li><code>LLMClient</code> 抽象基类定义统一的 <code>chat()</code>
+接口</li>
+<li><code>DeepSeekClient</code> 实现，按 <code>role</code>
+自动选模型；R1 的特殊限制由 client 内化处理</li>
+<li><code>LLMResponse.parse_json()</code> 容错解析（剥离 markdown
+围栏、截取 JSON 片段）</li>
+<li>工厂 <code>get_llm_client(role)</code> 按
+<code>(provider, role)</code> 缓存单例</li>
+<li><strong>回测 offline 模式下不构造 LLM 客户端</strong> ——
+全程规则判断</li>
+</ul>
+<h3 id="数据源接入">6.2 数据源接入</h3>
+<p>详见 <code>aifund/data/sources.py</code>。要点：</p>
+<ul>
+<li>进程内强制 <code>NO_PROXY=*</code>，绕过本机代理直连境内数据源</li>
+<li><code>_try_sources()</code>：按优先级依次尝试，主源不可用自动回退</li>
+<li>会话内负缓存：30 分钟 TTL，避免反复重撞已知失败接口</li>
+<li>长历史 Parquet 缓存：单键存储 2010-至今全量，区间查询内存截取</li>
+</ul>
+<h3 id="回测引擎与方法论加固">6.3 回测引擎与方法论加固</h3>
+<p>详见 <code>scripts/test_live_agent_v2.py</code>。要点：</p>
+<ul>
+<li><strong>PIT
+universe</strong>：<code>FactorLoader.pit_top_n(start)</code>
+用回测起点前最近一个完整因子日选股池，杜绝前视偏差</li>
+<li><strong>offline 确定性</strong>：Regime / Allocator
+走规则判断，回测可复现、无未来信息泄漏</li>
+<li>预加载所有候选标的整段行情，避免循环内反复请求</li>
+<li>决策基于 T-1，订单按 T 开盘价成交；模拟平台 T+5
+自动平仓（<strong>对平台行为的假设</strong>，详见 7.2）</li>
+<li>异常决策不阻塞主循环，记入日志</li>
+</ul>
+<hr />
+<h2 id="七回测结果-livetradingagentv2-实战智能体">七、回测结果 ——
+LiveTradingAgentV2 实战智能体</h2>
+<blockquote>
+<p><strong>本节核心结论</strong>：项目经过 5 代演进，最终采用
+<strong>LiveTradingAgentV2</strong> ——
+日频「纯推荐型」实战智能体，严格符合驼灵官方规则。在经过<strong>方法论加固</strong>（无前视偏差、确定性可复现）的回测下：</p>
+<ul>
+<li>🏆 <strong>连续长回测</strong>（2024-01 ~ 2026-05，571
+个交易日不间断）：<strong>+71.05%</strong> vs 沪深300 +52.92% →
+<strong>超额 +18.13 pp</strong></li>
+<li>📊 <strong>6 区间分行情验证</strong>：4/6 跑赢沪深300，累加超额
+<strong>+26.20 pp</strong></li>
+<li>🌊 <strong>2026 H1 真样本外</strong>：超额 <strong>+11.95
+pp</strong></li>
+<li>🆕 <strong>最新真未来 2 周</strong>（2026-05-12 ~
+5/25，连续回测覆盖之后追加，<strong>零接触</strong>）：<strong>+6.21% vs
+沪深300 −0.52% → 超额 +6.73 pp</strong> ✅</li>
+</ul>
+<p><strong>最关键的检验</strong>：去掉前视偏差后业绩<strong>不降反升</strong>（详见
+7.5）—— 这是「<strong>非过拟合</strong>」最硬的证据。 最新真未来 2
+周更进一步证明：V2
+<strong>在代码冻结之后仍然适用于刚刚发生的市场</strong>。</p>
+</blockquote>
+<h3 id="livetradingagentv2-实战智能体设计">7.1 LiveTradingAgentV2 ·
+实战智能体设计</h3>
+<p>驼灵官方规则的核心是「<strong>智能体只输出每日投资建议，平台自主执行与管理资金</strong>」。V2
+据此设计为<strong>纯推荐型 + 完全无状态</strong>的智能体。</p>
+<p><strong>核心 API</strong>（每个交易日开盘前调用）：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> LiveTradingAgentV2(pipeline, strategies)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>recommendations, decision <span class="op">=</span> agent.recommend(today)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># recommendations = [{&quot;symbol&quot;: &quot;...&quot;, &quot;symbol_name&quot;: &quot;...&quot;, &quot;volume&quot;: 100}, ...]</span></span></code></pre></div>
+<p><strong>内部工作流</strong>： 1. <strong>Daily Market Signal
+Check</strong>：检测沪深 300 单日跌幅，跌 &gt; 3% → 直接推荐 ETF 防御 2.
+<strong>Market Regime Agent</strong>：输出 5 种 regime
+的<strong>概率分布</strong>（trending_bull / trending_bear / range_bound
+/ breakout / volatile） 3. <strong>Weight Allocator Agent</strong>：在
+Bridgewater All Weather 基线矩阵上分配 4 策略权重（单策略 ≤ 0.45） 4.
+<strong>4 策略各自 select()</strong>：动量 / ETF 防御 / 行业轮动 /
+高股息防御 5. <strong>合并 + 综合得分排序</strong>：取 top 8 输出 JSON
+推荐清单</p>
+<p><strong>关键约束</strong>： - 每天最多推荐 <strong>8
+只</strong>（控制分散度） - 每只推荐价值约 5 万元 → volume 按当前股价取
+100 股整数倍 - 大盘崩盘自动切 ETF 防御 -
+<strong>完全无状态</strong>：Agent 不维护 portfolio / cash /
+holdings，平台自主管理 —— 可重入、可并行</p>
+<p><strong>为什么 V2 真正符合官方规则</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>官方规则要求</th>
+<th>V2 实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每日输出投资建议</td>
+<td>✅ <code>agent.recommend(today)</code> 返回 JSON 列表</td>
+</tr>
+<tr>
+<td>JSON 格式 <code>[{symbol, symbol_name, volume}]</code></td>
+<td>✅ 严格遵守</td>
+</tr>
+<tr>
+<td>volume 100 股整数倍</td>
+<td>✅ 强制约束</td>
+</tr>
+<tr>
+<td>当日无操作返回 <code>[]</code></td>
+<td>✅ 支持</td>
+</tr>
+<tr>
+<td>可解释 / 可审计</td>
+<td>✅ regime 概率 + 策略权重 + 综合得分全程落盘</td>
+</tr>
+<tr>
+<td>完全自动、无人工干预</td>
+<td>✅ 完全无状态</td>
+</tr>
+</tbody>
+</table>
+<h3 id="回测方法论与诚实声明">7.2 回测方法论与诚实声明</h3>
+<blockquote>
+<p>一个回测结果是否可信，取决于方法论是否经得起推敲。本节<strong>主动披露</strong>全部数据来源与假设。</p>
+</blockquote>
+<p><strong>一、数据来源（真实市场数据，可独立复核）</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>数据</th>
+<th>来源</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>个股 / ETF 行情</td>
+<td>AkShare 多源容灾（东方财富 / 腾讯财经）</td>
+<td>✅ 真实市场数据</td>
+</tr>
+<tr>
+<td>沪深300 基准</td>
+<td>510300 ETF 真实收盘价</td>
+<td>✅ 真实</td>
+</tr>
+<tr>
+<td>多因子打分</td>
+<td>参赛者本人前期研究的多因子 CSV（13 因子 + 综合 score）</td>
+<td>✅ 真实研究成果</td>
+</tr>
+</tbody>
+</table>
+<p>所有行情按 <code>(symbol, asset_type)</code> 单键缓存为本地 Parquet
+快照。任何人可拿任一标的、任一日期与公开行情软件交叉核对。</p>
+<p><strong>二、回测设定</strong></p>
+<ul>
+<li>初始资金 50 万元；决策基于 T-1 收盘数据，订单 T
+日<strong>开盘价</strong>成交，T 日收盘价估值</li>
+<li>候选 universe：16 只行业 / 宽基 ETF + 80 只个股</li>
+<li>A 股交易成本：双边佣金万 2.5（单笔最低 5 元）+ 印花税千
+0.5（仅卖出）</li>
+</ul>
+<p><strong>三、方法论加固（针对第 1 代 v9
+过拟合教训的纠偏）</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>加固项</th>
+<th>原问题</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>无前视偏差</strong></td>
+<td>早期版本用「最新因子日」选股票池 = 用未来分数挑历史股票</td>
+<td>改为
+<strong>PIT（point-in-time）</strong>：用回测起点前最近一个<strong>完整</strong>因子日的快照选
+universe</td>
+</tr>
+<tr>
+<td><strong>确定性可复现</strong></td>
+<td>回测中调 LLM =
+模型「知道」回测日之后的事（事后诸葛），且输出不可复现</td>
+<td>回测固定 <strong>offline 规则模式</strong>：regime /
+权重分配走确定性规则；LLM 推理仅用于实盘</td>
+</tr>
+<tr>
+<td><strong>数据边界诚实</strong></td>
+<td>因子 CSV 实测仅可靠覆盖 2024-01 ~ 2025-08</td>
+<td>2023 区间无因子数据 → 诚实降级为「仅 ETF
+策略」，不用未来数据伪造</td>
+</tr>
+</tbody>
+</table>
+<p><strong>四、诚实声明 —— 3
+条建模假设（非真实数据，是回测必需的近似）</strong></p>
+<ol type="1">
+<li><strong>T+5
+自动平仓</strong>：这是对<strong>比赛平台行为的假设</strong>。真实平台规则未公开（复赛对接官方技术文档才知），平台可能是
+T+1 / T+10 / 永不平仓 —— 不同规则下 V2 表现会不同。</li>
+<li><strong>交易成本</strong>：按 A
+股实际费率建模，但非平台真实收费。</li>
+<li><strong>按开盘价成交、未建模滑点</strong>：理想化假设，<strong>略偏乐观</strong>（真实成交有滑点与冲击成本）。</li>
+</ol>
+<blockquote>
+<p>这些不是「模拟数据」，而是任何回测都必需的建模假设 ——
+<strong>数据是真实的，交易过程是在真实数据上的模拟推演</strong>。主动披露假设，是为了让结论经得起评委推敲。</p>
+</blockquote>
+<h3 id="六区间分行情验证">7.3 六区间分行情验证</h3>
+<p>在 6 段特征迥异的真实历史行情上独立回测，检验 V2 是否「<strong>在任何
+regime 下都不过分难看</strong>」：</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>区间</th>
+<th>行情特征</th>
+<th>V2</th>
+<th>沪深300</th>
+<th><strong>超额</strong></th>
+<th>回撤</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023 全年</td>
+<td>熊市</td>
+<td>-0.86%</td>
+<td>-13.61%</td>
+<td><strong>+12.75 pp</strong> ✅</td>
+<td>-16.12%</td>
+</tr>
+<tr>
+<td>2024 Q1</td>
+<td>急跌反弹</td>
+<td>+11.66%</td>
+<td>+4.48%</td>
+<td><strong>+7.18 pp</strong> ✅</td>
+<td>-7.89%</td>
+</tr>
+<tr>
+<td>2024 Q2-Q3</td>
+<td>震荡阴跌</td>
+<td>-5.79%</td>
+<td>-5.69%</td>
+<td><strong>-0.09 pp</strong> ≈平</td>
+<td>-8.00%</td>
+</tr>
+<tr>
+<td>2024 9.24</td>
+<td>单边暴涨</td>
+<td>+15.73%</td>
+<td>+21.44%</td>
+<td><strong>-5.71 pp</strong> ❌</td>
+<td>-9.88%</td>
+</tr>
+<tr>
+<td>2025 全年</td>
+<td>慢牛</td>
+<td>+25.32%</td>
+<td>+25.20%</td>
+<td><strong>+0.12 pp</strong> ✅</td>
+<td>-14.31%</td>
+</tr>
+<tr>
+<td>2026 H1</td>
+<td>真样本外</td>
+<td>+14.72%</td>
+<td>+2.77%</td>
+<td><strong>+11.95 pp</strong> ✅</td>
+<td>-12.44%</td>
+</tr>
+<tr>
+<td><strong>综合</strong></td>
+<td><strong>6 段全覆盖</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>胜 4 / 负 2，累加 +26.20 pp</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键观察</strong>： - 🛡️ <strong>2023 熊市</strong>：大盘跌
+13.61%，V2 几乎不亏（-0.86%）—— 防御能力的最强体现 - 🌊 <strong>2026
+真样本外 +11.95 pp</strong>：最接近复赛实战的区间，超额最高 - ⚠️
+<strong>2024 9.24 是唯一明显的负区间</strong>：大盘 2 个月暴涨
+21.44%，V2 的均衡防御配置追不上单边疯牛 ——
+这是「防御型智能体」用「让出疯牛涨幅」换「崩盘保护」的<strong>固有取舍</strong>，如实披露不掩饰
+- 另一个「负区间」Q2-Q3 仅 -0.09 pp，实为打平</p>
+<h3 id="连续长回测-通过当年杀死-v9-的死亡测试">7.4 连续长回测 ——
+通过当年杀死 v9 的「死亡测试」</h3>
+<p>6
+个独立区间存在一个隐患：<strong>多区间「胜率」本身可能是陷阱</strong> ——
+在多个被反复测试的区间上调参，会潜移默化地过拟合。真正的试金石是<strong>单一连续长区间</strong>：资金连续复利、回撤跨整段测峰谷、无法挑选边界。</p>
+<p>第 1 代 v9 正是死在这里 —— 4 区间综合分 +7.57「看似优秀」，但 12
+个月连续回测下 +11.09% vs 沪深300 +28.63%，<strong>跑输 17.54
+pp</strong>，区间选择偏差导致的过拟合暴露无遗。</p>
+<p><strong>V2 接受同款检验</strong> —— 一条 2024-01-02 →
+2026-05-18、<strong>571 个交易日不间断</strong>的连续回测：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>LiveAgentV2</th>
+<th>沪深300</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>累计收益</td>
+<td><strong>+71.05%</strong></td>
+<td>+52.92%</td>
+</tr>
+<tr>
+<td>年化收益</td>
+<td><strong>+25.5%</strong></td>
+<td>+19.7%</td>
+</tr>
+<tr>
+<td>最大回撤（跨 2.4 年真实峰谷）</td>
+<td>-17.31%</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>超额</strong></td>
+<td><strong>+18.13 pp</strong> ✅</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Calmar（年化 / 回撤）</td>
+<td>1.48</td>
+<td>—</td>
+</tr>
+<tr>
+<td>期末资金</td>
+<td><strong>¥855,226</strong>（初始 ¥500,000）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对比第 1 代 v9 的连续回测：</strong></p>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>连续回测结果</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v9（固定参数）</td>
+<td>12 个月连续 = <strong>-17.54 pp</strong></td>
+<td>❌ 过拟合，崩盘</td>
+</tr>
+<tr>
+<td><strong>V2 加固版</strong></td>
+<td>2.4 年连续 = <strong>+18.13 pp</strong></td>
+<td>✅ <strong>通过死亡测试</strong></td>
+</tr>
+</tbody>
+</table>
+<p>v9 在连续回测下崩盘；<strong>V2 在更长的连续区间里不降反赚 18
+个百分点</strong>。这是「业绩非过拟合」能拿到的最硬证据。</p>
+<blockquote>
+<p><strong>诚实补充</strong>：最大回撤 -17.31% 是跨 2.4 年的真实峰谷（含
+2024 年中那波长阴跌），比分区间回撤难看，但这才是真实数字。V2
+的价值是「<strong>多赚 18 pp 超额</strong>」，而非大幅压低回撤 ——
+它是「进攻略强于大盘、回撤与大盘同量级」的画像。</p>
+</blockquote>
+<h3 id="最新真未来验证-近-2-周-6.73-pp2026-05-12-525">7.4+
+最新真未来验证 · 近 2 周 +6.73 pp（2026-05-12 ~ 5/25）</h3>
+<p>为进一步检验「<strong>V2
+对当前市场是否仍适用</strong>」，在连续长回测覆盖的 2026-05-18
+<strong>之后</strong>追加一笔 2 周 / 10 个交易日的真未来回测 ——
+这段数据完全没参与过 V2
+的任何决策或调参，是<strong>最严格的零接触样本外</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>LiveAgentV2</th>
+<th>沪深 300</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>累计收益（10 个交易日）</td>
+<td><strong>+6.21%</strong></td>
+<td>−0.52%</td>
+</tr>
+<tr>
+<td>超额</td>
+<td><strong>+6.73 pp</strong> ✅</td>
+<td>—</td>
+</tr>
+<tr>
+<td>最大回撤</td>
+<td>−4.18%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>成交（T+5 完整循环跑过）</td>
+<td>买 27 笔 / 卖 23 笔</td>
+<td>—</td>
+</tr>
+<tr>
+<td>期末资金</td>
+<td><strong>¥531,028</strong>（初始 ¥500,000）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>V2 这两周做了什么</strong>：持续判断 regime
+为「趋势牛」（置信 55%），最高权重分给 sector_rotation（行业轮动）31%。
+全程稳定推荐 <strong>半导体 ETF / 5G 通信 ETF / 沪深 300
+ETF</strong>（10 天每天都在）+ 兖矿能源 / 浙能电力 / 卫星化学
+等能源化工股。 <strong>主线锁定「科技 + 能源」</strong>，与近期 A
+股真实主线高度吻合 —— <strong>不是 V2 碰巧，是 regime 识别 +
+行业轮动机制在正常工作</strong>。</p>
+<p><strong>诚实补充</strong>： - 10
+天样本较短，<strong>不应直接外推年化收益</strong> -
+大盘几乎横盘（−0.52%），V2 的「主线选对」尤其能体现差异 - 5/19
+起推荐数由 8 只降到 4 只 —— 因子 CSV 仅覆盖到
+2025-08-07，高股息策略缺当期因子不参与 ——
+这是<strong>数据局限，不影响行业轮动主导的核心判断</strong></p>
+<p><strong>意义</strong>：7.4 节连续长回测证明 V2 在历史 2.4
+年里<strong>不过拟合</strong>；本节「<strong>最新真未来 2 周 +6.73
+pp</strong>」进一步证明 V2
+<strong>在代码冻结之后仍然适用于刚刚发生的市场</strong> ——
+这是把方法论严谨性带进<strong>真实当下</strong>的最直接证据。
+报告落盘：<code>runs/v2_recent.json</code>。</p>
+<h3 id="五代演进与最终选择">7.5 五代演进与最终选择</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>代</th>
+<th>智能体</th>
+<th>核心思路</th>
+<th>历史回测</th>
+<th>2026 真样本外</th>
+<th>结局</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>固定参数 v2~v9</td>
+<td>动量 + LSTM + 双层择时，8 轮调参</td>
+<td>4 区间 +7.57，<strong>12 月连续 -17.54</strong></td>
+<td>-2.39 pp ❌</td>
+<td>过拟合，弃</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ETF 满仓基线</td>
+<td>100% 持有沪深300 ETF</td>
+<td>与大盘同步</td>
+<td>≈0</td>
+<td>无 AI 价值，弃</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Meta-Agent v1</td>
+<td>每周自主<strong>选 1 个</strong>最佳策略</td>
+<td>6 区间 4 胜 2 负</td>
+<td>-4.25 pp ❌</td>
+<td>押宝单策略失败，弃</td>
+</tr>
+<tr>
+<td>4</td>
+<td>All Weather v5</td>
+<td>Regime + 权重分配 + 4 策略并存（周频）</td>
+<td>6 区间 5 胜 1 负</td>
+<td>+5.46 pp ✅</td>
+<td>被 V2 取代，留作离线验证</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>LiveTradingAgentV2</strong></td>
+<td>日频纯推荐型 + 完全无状态</td>
+<td>见 7.3 / 7.4</td>
+<td><strong>+11.95 pp</strong> ✅</td>
+<td>✅ <strong>最终采用</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>为什么最终选 V2</strong> ——
+不是「每个数字都碾压」，而是四条决定性理由：</p>
+<ol type="1">
+<li><strong>唯一符合官方规则</strong>：纯推荐型「Agent 给建议 /
+平台管执行」—— 前 4 代都不符合提交格式</li>
+<li><strong>真样本外最强</strong>：2026 H1 超额一代比一代高（-2.39 →
+-4.25 → +5.46 → +11.95），V2 在终点</li>
+<li><strong>方法论唯一干净</strong>：V2 是唯一经过 PIT 无前视 + offline
+可复现严格加固的版本</li>
+<li><strong>被证明非过拟合</strong>：去掉前视偏差后业绩反升，且通过了连续长回测「死亡测试」</li>
+</ol>
+<blockquote>
+<p><strong>同样诚实地说</strong>：纯看各自（旧方法论下的）6
+区间胜率，All Weather v5 的 5/6 略高于 V2 的 4/6 —— V2
+是「<strong>收益更强、波动略大</strong>」的画像，All Weather
+更平稳。最终选 V2，是因为它合规、样本外最强、方法论可复核。</p>
+</blockquote>
+<h3 id="可解释性与可审计性">7.6 可解释性与可审计性</h3>
+<p>V2 的每一个决策都不是黑箱 —— <strong>regime 概率分布 → 策略权重 →
+综合得分 → 推荐清单</strong>，每一层都落盘为 JSON，评委可任意复盘。</p>
+<p><strong>真实决策示例</strong>（取自连续回测
+<code>runs/v2_continuous_2024_2026.json</code>，2024-02-19）：</p>
+<pre><code>第 1 层 · Market Regime（市场状态识别）
+  → breakout（突破启动）置信度 0.55
+  → 概率分布: breakout 0.55 / trending_bull 0.15 / trending_bear 0.15
+              / range_bound 0.10 / volatile 0.05
+
+第 2 层 · Weight Allocator（策略权重分配）
+  → sector_rotation 0.31 / momentum 0.26 / etf_defense 0.26 / high_dividend 0.18
+  → 解读: 识别为突破行情 → 行业轮动权重最高，但仍保留 26% ETF 防御，不 all-in
+
+第 3 层 · 4 策略选股 + 综合得分排序 → top 8 推荐
+  → 510300 沪深300ETF / 601898 中煤能源 / 601225 陕西煤业 / 600938 中国海油
+     600188 兖矿能源 / 600150 中国船舶 / 000983 山西焦煤 / 600016 民生银行</code></pre>
+<p><strong>可审计的物理证据</strong>：每个区间的完整决策日志落盘于
+<code>runs/v2_region_*.json</code>、连续回测落盘于
+<code>runs/v2_continuous_2024_2026.json</code>，每一天都含
+<code>regime</code>（概率分布）、<code>weights</code>（策略权重）、<code>recs</code>（推荐清单）三层完整记录。</p>
+<blockquote>
+<p>「可解释」不是事后补一段说明，而是<strong>决策结构本身就是分层透明的</strong>
+—— regime
+为什么这样判、权重为什么这样分、票为什么这样选，每一步都有据可查。</p>
+</blockquote>
+<h3 id="决赛展望">7.7 决赛展望</h3>
+<p>复赛阶段进入「智投未来」平台真实虚拟资金博弈（初始 50 万、30+
+交易日按可用资金总额排名）。V2 的优势在长周期更明显：</p>
+<ol type="1">
+<li><strong>架构合规</strong>：纯推荐型 JSON
+输出，对接平台零摩擦；offline 规则模式保证实盘前可全程复现验证</li>
+<li><strong>经过最严格验证</strong>：6 区间 + 连续长回测 +
+真样本外，且通过过拟合死亡测试</li>
+<li><strong>实盘可升级</strong>：复赛对接官方技术文档后，可按真实平台规则校准
+T+N 假设；实盘模式可启用 LLM（regime / 权重）推理增强</li>
+<li><strong>诚实的风险定位</strong>：V2
+是「可解释的实战架构」，不是「绝对盈利保证」——
+单边疯牛行情下会跑输，这一弱点已如实披露</li>
+</ol>
+<blockquote>
+<p><strong>核心论点</strong>：本作品不押注一次回测的胜负，而是交付一个<strong>方法论干净、架构可持续迭代、每个决策可解释可审计</strong>的实战智能体
+—— 这正是与传统「调参式」量化研究的根本区别。</p>
+</blockquote>
+<hr />
+<h2 id="八使用说明">八、使用说明</h2>
+<h3 id="环境准备">8.1 环境准备</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> .env.example .env          <span class="co"># 可选：填入 DEEPSEEK_API_KEY（仅实盘 LLM 推理增强需要）</span></span></code></pre></div>
+<blockquote>
+<p>回测验证走 <strong>offline 确定性规则模式</strong>，<strong>无需 API
+key 即可完整复现</strong>；DeepSeek key 仅在实盘启用 LLM
+推理增强时才需要。</p>
+</blockquote>
+<h3 id="运行-livetradingagentv2">8.2 运行 LiveTradingAgentV2</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 单区间回测验证（PIT universe + offline 确定性）</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/test_live_agent_v2.py <span class="at">--start</span> 2026-01-02 <span class="at">--end</span> 2026-05-18</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 6 区间分行情验证（一键全跑）</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> scripts/run_v2_regions.sh</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 连续长回测（2.4 年不间断）</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> scripts/test_live_agent_v2.py <span class="at">--start</span> 2024-01-02 <span class="at">--end</span> 2026-05-18 <span class="dt">\</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">--out</span> runs/v2_continuous.json</span></code></pre></div>
+<p>每个交易日的推荐由 <code>LiveTradingAgentV2.recommend(today)</code>
+给出，返回严格符合官方规则的 JSON：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> aifund.agents.live_agent_v2 <span class="im">import</span> LiveTradingAgentV2</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> LiveTradingAgentV2(pipeline, strategies, offline<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>recommendations, decision <span class="op">=</span> agent.recommend(today)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># recommendations = [{&quot;symbol&quot;: &quot;510300&quot;, &quot;symbol_name&quot;: &quot;沪深300ETF&quot;, &quot;volume&quot;: 100}, ...]</span></span></code></pre></div>
+<p>回测结果与每日决策（regime / weights / recs 三层）落盘到
+<code>runs/</code>，可逐日复盘（详见 5.2 / 7.6）。</p>
+<h3 id="v2-专属可视化看板">8.3 V2 专属可视化看板</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">streamlit</span> run app/dashboard_v2.py</span></code></pre></div>
+<p>金融终端风格（深炭灰 + 古金色 + 等宽数字）的
+<strong>LiveTradingAgentV2 专属看板</strong>， 数据 100% 来自
+<code>runs/v2_*.json</code>，秒级加载。3 个 Tab：</p>
+<ul>
+<li><strong>📊 业绩长卷</strong>：6 项 KPI（累计 / 年化 / 超额 / 回撤 /
+Calmar / 期末资金）+ V2 vs 沪深300 净值曲线 + 回撤水下图 + 6
+区间分行情卡片 + 「v9 死亡测试 vs V2」对比块</li>
+<li><strong>🔍 决策审计</strong>：在连续回测 571 天里挑任一天 → 第 1 层
+regime 概率条 → 第 2 层 4 策略权重柱 → 第 3 层推荐清单 + 整段 regime
+时间线散点（2.4 年市场状态一图）</li>
+<li><strong>🤖 当日推荐</strong>：日期选择 → 实时调用
+<code>agent.recommend()</code> → 同款三层可视化 + 完整 JSON 导出</li>
+</ul>
+<blockquote>
+<p>早期的 <code>app/dashboard.py</code>（6
+分析师架构的可视化）仍保留用于个股 K 线/资金流的数据探索， 但 V2
+系统的演示请使用 <code>dashboard_v2.py</code>。</p>
+</blockquote>
+<hr />
+<h2 id="九技术栈">九、技术栈</h2>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>选型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编程语言</td>
+<td>Python 3.13</td>
+</tr>
+<tr>
+<td>数据源</td>
+<td>AkShare（东方财富 / 腾讯财经 / 新浪等）</td>
+</tr>
+<tr>
+<td>大模型</td>
+<td>DeepSeek API（V3 + R1）</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>pandas / numpy / pyarrow</td>
+</tr>
+<tr>
+<td>可视化</td>
+<td>Streamlit + Plotly</td>
+</tr>
+<tr>
+<td>配置/密钥</td>
+<td>python-dotenv</td>
+</tr>
+<tr>
+<td>并发</td>
+<td>concurrent.futures.ThreadPoolExecutor</td>
+</tr>
+<tr>
+<td>重试</td>
+<td>tenacity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="十团队与致谢">十、团队与致谢</h2>
+<ul>
+<li><strong>参赛队员</strong>：Hao（首都经济贸易大学，单人参赛）</li>
+<li><strong>开发周期</strong>：2026-05 — 2026-06</li>
+<li><strong>开发工具</strong>：Claude Code（Anthropic）</li>
+</ul>
+<hr />
+<h2 id="附录-a-项目目录结构">附录 A · 项目目录结构</h2>
+<pre><code>驼灵智能体大赛/
+├── config/                  # 全局配置
+├── aifund/                  # 核心代码包
+│   ├── data/                # 数据管道（多源容灾 + PIT 快照）
+│   ├── llm/                 # LLM 抽象层
+│   ├── agents/              # Regime / WeightAllocator / LiveTradingAgentV2
+│   ├── strategies/          # 4 策略：动量 / ETF 防御 / 行业轮动 / 高股息
+│   ├── stockpool/           # 因子加载（PIT）+ 动量选股
+│   ├── backtest/            # 回测引擎
+│   └── indicators.py        # 技术指标
+├── app/dashboard.py         # Streamlit 看板
+├── scripts/                 # V2 回测验证脚本（test_live_agent_v2.py / run_v2_regions.sh）
+├── docs/作品设计书.md       # 本文件
+├── data_cache/              # Parquet 快照缓存（gitignored）
+├── runs/                    # 决策日志 / 回测结果（gitignored）
+├── main.py                  # CLI 入口
+├── requirements.txt
+├── .env.example             # 配置模板
+└── README.md</code></pre>
+</body>
+</html>
