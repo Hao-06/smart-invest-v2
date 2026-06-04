@@ -1,12 +1,13 @@
 """**LiveTradingAgentV2 · 纯推荐版回测** —— 验证「Agent 只给推荐 / 平台管执行」架构。
 
 回测模拟（假设平台行为）：
-1. 每天调用 agent.recommend(as_of) → 收到 JSON 推荐
-2. 平台**等权买入**所有推荐的票（**T+5 自动平仓** A 股短期策略常用规则）
-3. 期末按持仓估值 + 现金计算总资产
+1. 每个交易日 T，用**前一交易日 T-1 收盘**数据生成推荐（盘前决策），
+   T 日**开盘价**成交 —— 信号严格早于成交，**无前视偏差**。
+2. 平台买入所有推荐的票，**T+N 个交易日**后按开盘价自动平仓（默认 N=5）。
+3. 期末按持仓收盘价估值 + 现金计算总资产。
 
-注：这是**对平台行为的简化假设**，仅供回测演示。
-真实复赛平台行为以官方技术文档为准。
+注：成交时点（T 开盘）与平仓规则（T+5 交易日）是**对平台行为的简化假设**，
+仅供回测演示；真实复赛平台行为以官方技术文档为准。无滑点（理想化成交）。
 
 用法：
     python3 scripts/test_live_agent_v2.py --start 2026-01-02 --end 2026-05-18
@@ -89,7 +90,7 @@ def main() -> int:
     print(f"=== 🎯 LiveTradingAgentV2 · 纯推荐版回测 · {args.name} ===")
     print(f"区间：{start} ~ {end}")
     print(f"初始资金：{args.capital:,.0f}")
-    print(f"平台模拟规则：每天等权买入 V2 推荐 + T+{args.hold_days} 自动平仓")
+    print(f"平台模拟规则：T-1 收盘决策 → T 开盘成交 → T+{args.hold_days} 个交易日开盘平仓（无前视）")
     print()
 
     pipeline = DataPipeline()
@@ -133,6 +134,7 @@ def main() -> int:
     hs300_return = ((float(hs300["close"].iloc[-1]) / float(hs300["close"].iloc[0]) - 1) * 100
                     if not hs300.empty else 0)
     trading_days = sorted(hs300["date"].tolist())
+    day_index = {d: idx for idx, d in enumerate(trading_days)}  # 交易日序号（持有期按交易日计）
     print(f"  交易日数：{len(trading_days)}")
 
     # 模拟平台
@@ -151,8 +153,9 @@ def main() -> int:
         for sym in list(holdings.keys()):
             remaining = []
             for buy_date, shares, buy_price in holdings[sym]:
-                hold_days = (today - buy_date).days
-                if hold_days >= args.hold_days:
+                # 按「交易日」计持有期（而非自然日），让 T+5 真正等于 5 个交易日
+                held = day_index.get(today, 0) - day_index.get(buy_date, 0)
+                if held >= args.hold_days:
                     # 平仓
                     sell_price = get_price(sym, today, price_cache, "open")
                     if sell_price is None:
@@ -171,8 +174,13 @@ def main() -> int:
                 del holdings[sym]
 
         # 2. V2 给出今日推荐
+        #    无前视：用「前一交易日收盘」数据在 today 开盘前生成决策，再于 today 开盘成交。
+        #    （实盘盘前调用时当日 K 线尚未生成，recommend 自然只能看到 T-1 收盘；
+        #     回测里历史数据已含当日完整 K 线，故显式传入前一交易日为 as_of，杜绝
+        #     「用当日收盘信号回到当日开盘成交」的前视偏差，使 T-1 决策/T 开盘成交成立。）
+        signal_date = trading_days[i - 1] if i > 0 else today - timedelta(days=1)
         try:
-            recs, decision = agent.recommend(today)
+            recs, decision = agent.recommend(signal_date)
         except Exception as exc:
             print(f"  {today}: Agent 失败 ({exc})", flush=True)
             # 估值跳过

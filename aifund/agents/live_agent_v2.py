@@ -167,7 +167,8 @@ class LiveTradingAgentV2:
             effective_weight = weight * output.position_ratio
             # 策略内部排序的隐含分数：第 1 名 1.0、第 2 名 0.9、...
             for i, sym in enumerate(output.symbols):
-                rank_score = 1.0 - i * 0.05
+                # max(0, …)：候选数 > 20 时不让排名靠后的票变成「负分」反向扣分
+                rank_score = max(0.0, 1.0 - i * 0.05)
                 symbol_scores[sym] = symbol_scores.get(sym, 0) + effective_weight * rank_score
 
         # ============ 步骤 4: 取综合得分 top N，输出推荐 ============
@@ -186,11 +187,19 @@ class LiveTradingAgentV2:
         sorted_symbols = sorted(symbol_scores.items(), key=lambda x: -x[1])
         top_picks = sorted_symbols[: self.MAX_RECOMMENDATIONS]
 
+        # 赛道要求「推荐标的须为当日可正常交易的证券（非停牌/退市整理）」：
+        # 以基准 ETF（沪深300ETF）最近一个有行情的交易日为参照日 ref_date，
+        # 剔除最新行情滞后于 ref_date 的标的（停牌/退市整理当日无成交）。
+        ref_date = self._latest_trading_date(as_of)
+
         recs = []
         for sym, score in top_picks:
             asset_type = "etf" if self._is_etf(sym) else "stock"
-            price = self._get_latest_price(sym, as_of, asset_type=asset_type)
+            price, last_date = self._get_price_and_date(sym, as_of, asset_type=asset_type)
             if price is None or price <= 0:
+                continue
+            # 当日不可交易（停牌/退市整理 → 最新行情早于基准交易日）→ 跳过
+            if ref_date is not None and last_date is not None and last_date < ref_date:
                 continue
             # 计算 volume：每只约 5 万元 → 100 股整数倍
             volume = (int(self.TARGET_VALUE_PER_STOCK / price) // 100) * 100
@@ -250,17 +259,27 @@ class LiveTradingAgentV2:
             "volume": volume,
         }]
 
-    def _get_latest_price(self, symbol: str, as_of: date,
-                          asset_type: str = "stock") -> float | None:
+    def _get_price_and_date(self, symbol: str, as_of: date,
+                            asset_type: str = "stock") -> tuple[float | None, date | None]:
+        """返回 (最新收盘价, 最新行情日期)；无数据返回 (None, None)。"""
         try:
             df = sources.get_price_history(
                 symbol, as_of - timedelta(days=10), as_of, asset_type=asset_type,
             )
             if df is None or df.empty:
-                return None
-            return float(df.sort_values("date")["close"].iloc[-1])
+                return None, None
+            df = df.sort_values("date")
+            return float(df["close"].iloc[-1]), df["date"].iloc[-1]
         except Exception:
-            return None
+            return None, None
+
+    def _get_latest_price(self, symbol: str, as_of: date,
+                          asset_type: str = "stock") -> float | None:
+        return self._get_price_and_date(symbol, as_of, asset_type=asset_type)[0]
+
+    def _latest_trading_date(self, as_of: date) -> date | None:
+        """最近一个有行情的交易日（用基准 ETF 510300 作参照）。"""
+        return self._get_price_and_date(HS300_ETF, as_of, asset_type="etf")[1]
 
     def _get_symbol_name(self, symbol: str) -> str:
         if symbol in _NAME_CACHE:
@@ -275,10 +294,13 @@ class LiveTradingAgentV2:
             name = str(info.get("股票简称") or info.get("name") or "").strip()
         except Exception:
             name = ""
-        # 无论成功失败都写缓存：失败也缓存代码本身，避免每天重试昂贵的失败请求
-        _NAME_CACHE[symbol] = name or symbol
-        _save_persistent_name_cache()  # 持久化到磁盘，CLI 跨进程也享有缓存
-        return _NAME_CACHE[symbol]
+        # 只在拿到「真名」时才写缓存；解析失败则返回代码但**不污染缓存**，
+        # 留待下次重试（避免把 code 当 name 永久缓存，导致看板显示成数字）。
+        if name and name != symbol:
+            _NAME_CACHE[symbol] = name
+            _save_persistent_name_cache()  # 持久化到磁盘，CLI 跨进程也享有缓存
+            return name
+        return symbol
 
     @staticmethod
     def _is_etf(symbol: str) -> bool:

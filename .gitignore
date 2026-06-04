@@ -50,6 +50,8 @@ docs/*.bak*
 # Playwright 截图 & 微信原图 (开发期产物,不入库)
 v2_*.png
 v2_*.jpg
-dashboard_*.png
+*dashboard*.png
+audit_*.png
+shot_*.png
 微信图片_*.png
 # docs/作品设计书.html  ← 保留入库,作为 PDF 重新生成的源(评委可二次定制)

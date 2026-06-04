@@ -610,25 +610,25 @@ with tab1:
                   <div style='margin-top:0.2rem;font-size:0.85rem;'>{icon}</div>
                 </div>""", unsafe_allow_html=True)
 
-        # ── 死亡测试对比 ──
-        st.markdown("## 通过 v9 死亡测试 · 非过拟合的硬证据")
+        # ── 前视自审：修正前后对比 ──
+        st.markdown("## 提交前前视偏差自审 · 修正后仍跑赢 = 非过拟合的硬证据")
         cc1, cc2 = st.columns(2)
         with cc1:
             st.markdown(f"""
             <div style='padding:1rem; background:{COLOR_CARD};
-                       border:1px solid {COLOR_BORDER}; border-left:3px solid {COLOR_DOWN};
+                       border:1px solid {COLOR_BORDER}; border-left:3px solid {COLOR_MUTED};
                        border-radius:4px;'>
               <div style='color:{COLOR_MUTED};font-size:0.7rem;
-                          text-transform:uppercase;letter-spacing:1.5px;'>第 1 代 · 固定参数 v9</div>
+                          text-transform:uppercase;letter-spacing:1.5px;'>表观业绩 · 含成交时点前视(已废弃)</div>
               <div style='color:{COLOR_TEXT};font-size:0.85rem;margin:0.4rem 0;'>
-                4 区间综合分 <span style='color:{COLOR_GOLD_LIGHT};font-family:JetBrains Mono;'>+7.57</span> 看似优秀
+                原先用「<span style='color:{COLOR_GOLD_LIGHT};'>当日收盘</span>」信号回到「当日开盘」成交
               </div>
-              <div style='color:{COLOR_DOWN};font-family:JetBrains Mono;
+              <div style='color:{COLOR_MUTED};font-family:JetBrains Mono;
                           font-size:1.8rem;font-weight:700;margin:0.3rem 0;'>
-                −17.54 pp <span style='font-size:1rem;'>❌</span>
+                +18.13 pp <span style='font-size:1rem;'>⚠</span>
               </div>
               <div style='color:{COLOR_MUTED};font-size:0.78rem;'>
-                12 月连续回测 · 过拟合崩盘
+                看似强 alpha，实为前视放大 · 提交前已自审修复
               </div>
             </div>""", unsafe_allow_html=True)
         with cc2:
@@ -637,9 +637,9 @@ with tab1:
                        border:1px solid {COLOR_BORDER}; border-left:3px solid {COLOR_UP};
                        border-radius:4px;'>
               <div style='color:{COLOR_MUTED};font-size:0.7rem;
-                          text-transform:uppercase;letter-spacing:1.5px;'>第 5 代 · LiveTradingAgentV2</div>
+                          text-transform:uppercase;letter-spacing:1.5px;'>修正后 · T-1 收盘决策 / T 开盘成交</div>
               <div style='color:{COLOR_TEXT};font-size:0.85rem;margin:0.4rem 0;'>
-                2.4 年连续 · 571 个交易日不间断 · 同款检验
+                2.4 年连续 · 571 个交易日 · 信号严格早于成交,无前视
               </div>
               <div style='color:{COLOR_UP};font-family:JetBrains Mono;
                           font-size:1.8rem;font-weight:700;margin:0.3rem 0;'>

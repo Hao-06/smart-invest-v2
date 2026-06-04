@@ -9,10 +9,14 @@ CSV 来自 ``~/量化金融/多因子策略优化-re/5.2 沪深300_剔除垃圾�
 from __future__ import annotations
 
 import bisect
+import sys
 from datetime import date
 from pathlib import Path
 
 import pandas as pd
+
+#: 进程内只对「CSV 缺失降级」告警一次（多个策略各构造一次 FactorLoader，避免刷屏）
+_WARNED_MISSING_CSV = False
 
 # 默认 CSV 路径（指向 Hao 量化金融文件夹）
 DEFAULT_CSV = (
@@ -38,14 +42,27 @@ class FactorLoader:
 
     def __init__(self, csv_path: Path | str | None = None) -> None:
         path = Path(csv_path) if csv_path else DEFAULT_CSV
-        if not path.exists():
-            raise FileNotFoundError(
-                f"多因子 CSV 不存在：{path}\n"
-                f"请确认 Hao 的量化金融文件夹存在并包含该文件。"
-            )
         self.csv_path: Path = path
-        self._df: pd.DataFrame = self._load()
-        self._dates: list[date] = sorted(self._df["日期"].unique().tolist())
+        #: 因子库是否可用（CSV 存在）。False 时进入「空因子库」降级态。
+        self.available: bool = path.exists()
+        if not self.available:
+            # 优雅降级：CSV 不存在（典型如评委 clone 仓库后本地没有这个仓库外的
+            # 大文件）时，不再 raise，而是进入「空因子库」状态 —— 所有查询返回空，
+            # 上层 PIT universe 自然为空 → 系统降级为「仅 ETF 策略」运行，
+            # 与 docs/已知限制与边界条件.md 承诺的降级行为一致，而非直接崩溃。
+            global _WARNED_MISSING_CSV
+            if not _WARNED_MISSING_CSV:
+                print(
+                    f"⚠ 多因子 CSV 不存在（{path}）→ 个股 universe 为空，"
+                    f"系统降级为仅 ETF 策略。如需个股策略，请放置该 CSV 或用 --use-llm 实盘模式。",
+                    file=sys.stderr,
+                )
+                _WARNED_MISSING_CSV = True
+            self._df: pd.DataFrame = pd.DataFrame(columns=_USED_COLS + ["symbol"])
+            self._dates: list[date] = []
+            return
+        self._df = self._load()
+        self._dates = sorted(self._df["日期"].unique().tolist())
 
     # ------------------------------------------------------------------
     # 内部加载
@@ -64,8 +81,10 @@ class FactorLoader:
     # 对外查询
     # ------------------------------------------------------------------
     @property
-    def date_range(self) -> tuple[date, date]:
-        """数据覆盖的日期范围。"""
+    def date_range(self) -> tuple[date | None, date | None]:
+        """数据覆盖的日期范围（空因子库返回 (None, None)）。"""
+        if not self._dates:
+            return None, None
         return self._dates[0], self._dates[-1]
 
     @property
