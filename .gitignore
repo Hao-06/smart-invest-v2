@@ -35,6 +35,7 @@ env/
 output/
 runs/*
 !runs/v2_continuous_2024_2026.json
+!runs/v2_continuous_hold*.json
 !runs/v2_region_*.json
 !runs/v2_recent.json
 !runs/.gitkeep

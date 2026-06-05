@@ -639,7 +639,7 @@ with tab1:
               <div style='color:{COLOR_MUTED};font-size:0.7rem;
                           text-transform:uppercase;letter-spacing:1.5px;'>修正后 · T-1 收盘决策 / T 开盘成交</div>
               <div style='color:{COLOR_TEXT};font-size:0.85rem;margin:0.4rem 0;'>
-                2.4 年连续 · 571 个交易日 · 信号严格早于成交,无前视
+                2.4 年连续 · 571 日 · 无前视 · T+5 回测主假设(T+1/T+3/T+5 敏感性)
               </div>
               <div style='color:{COLOR_UP};font-family:JetBrains Mono;
                           font-size:1.8rem;font-weight:700;margin:0.3rem 0;'>
