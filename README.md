@@ -57,8 +57,8 @@
 ## 🚀 30 秒上手
 
 ```bash
-git clone <this repo>
-cd 驼灵智能体大赛
+git clone https://github.com/Hao-06/smart-invest-v2.git
+cd smart-invest-v2
 pip install -r requirements.txt
 
 # 1. 环境自检
