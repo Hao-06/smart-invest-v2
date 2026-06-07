@@ -55,4 +55,7 @@ v2_*.jpg
 audit_*.png
 shot_*.png
 微信图片_*.png
+# 演示视频(单独上传提交平台,不入代码库;且可能超 GitHub 100MB 单文件限制)
+*.mp4
+*.mov
 # docs/作品设计书.html  ← 保留入库,作为 PDF 重新生成的源(评委可二次定制)
