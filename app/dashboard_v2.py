@@ -1,4 +1,4 @@
-"""智投未来 · LiveTradingAgentV2 专属看板。
+"""Alpha-Forge · LiveTradingAgentV2 专属看板。
 
 围绕 V2 真实输出（regime 概率 / 4 策略权重 / top 8 推荐 / 决策日志）的可视化看板，
 与早期 `app/dashboard.py`（6 分析师架构）并存。
@@ -98,7 +98,7 @@ STRATEGY_DESCRIPTIONS = {
 
 
 st.set_page_config(
-    page_title="智投未来 · LiveTradingAgentV2",
+    page_title="Alpha-Forge · LiveTradingAgentV2",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -482,7 +482,7 @@ st.markdown(f"""
   <div style="flex:1;">
     <div style="color:{COLOR_GOLD_LIGHT}; font-size:1.6rem; font-weight:700;
                 letter-spacing:0.5px; line-height:1.1;">
-      智投未来 · LiveTradingAgentV2
+      Alpha-Forge · LiveTradingAgentV2
     </div>
     <div style="color:{COLOR_MUTED}; font-size:0.78rem; letter-spacing:1.5px;
                 text-transform:uppercase; margin-top:0.15rem;">
